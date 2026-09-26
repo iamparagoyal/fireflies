@@ -266,8 +266,8 @@ SKIP_E2E=1 ./scripts/test-all.sh
 
 ## Deployment
 
-- **Backend on Render:** `render.yaml` defines a Python web service rooted at `backend/` with a persistent disk mounted at `/var/data` for the SQLite file. Set `ANTHROPIC_API_KEY` in the dashboard if you want Claude notes.
-- **Frontend on Vercel:** import the repo with **Root Directory** `frontend` and set `API_URL` to the Render service URL.
+- **Backend on Render (free plan):** `render.yaml` defines a Python web service rooted at `backend/`. The free plan has no persistent disk, so the SQLite file resets when the service restarts and the sample meetings are reseeded on startup. It also sleeps after 15 minutes idle, so the first request can take about a minute. For durable data, move to a paid instance with a disk mounted for `DATABASE_URL`. Set `ANTHROPIC_API_KEY` in the dashboard if you want Claude notes.
+- **Frontend on Vercel (Hobby plan):** import the repo with **Root Directory** `frontend` and set `API_URL` to the Render service URL.
 
 ## Assumptions
 
