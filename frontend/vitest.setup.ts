@@ -24,3 +24,20 @@ if (!window.matchMedia) {
       dispatchEvent: () => false,
     }) as MediaQueryList;
 }
+
+vi.mock("next/navigation", async () => {
+  const { router, navigationState } = await import("./src/test/navigation");
+  return {
+    useRouter: () => router,
+    usePathname: () => navigationState.pathname,
+    useSearchParams: () => navigationState.searchParams,
+    useParams: () => ({}),
+    redirect: vi.fn(),
+  };
+});
+
+afterEach(async () => {
+  const { router, setSearchParams } = await import("./src/test/navigation");
+  Object.values(router).forEach((fn) => fn.mockReset());
+  setSearchParams("");
+});
