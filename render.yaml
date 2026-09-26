@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: fireflies-clone-api
+    runtime: python
+    rootDir: backend
+    plan: starter
+    buildCommand: pip install uv && uv sync --frozen --no-dev
+    startCommand: uv run --no-dev uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: DATABASE_URL
+        value: sqlite:////var/data/fireflies.db
+      - key: SEED_ON_STARTUP
+        value: "true"
+      - key: SEED_TIMEZONE
+        value: Asia/Kolkata
+      - key: ANTHROPIC_API_KEY
+        sync: false
+    disk:
+      name: sqlite-data
+      mountPath: /var/data
+      sizeGB: 1
