@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #f6f6fa;
+  --surface: #ffffff;
+  --surface-muted: #f9f9fc;
+  --surface-hover: #f3f2fb;
+  --border: #e7e6f0;
+  --border-strong: #d6d4e4;
+  --text: #1c1b2e;
+  --text-muted: #6b6a80;
+  --text-subtle: #9998ad;
+  --brand: #6c47ff;
+  --brand-hover: #5a36ee;
+  --brand-soft: #efebff;
+  --brand-text: #5433e6;
+  --success: #16a34a;
+  --success-soft: #e8f7ee;
+  --danger: #e5484d;
+  --danger-soft: #fdecec;
+  --warning: #d97706;
+  --highlight: #fff3b0;
+  --highlight-active: #ffd84d;
+  --active-line: #f4f1ff;
+  --shadow: 0 1px 2px rgb(20 16 60 / 0.06), 0 4px 16px rgb(20 16 60 / 0.06);
+  --radius: 10px;
+  --sidebar-width: 232px;
+}
+
+.dark {
+  --bg: #0f0f17;
+  --surface: #171723;
+  --surface-muted: #1c1c2a;
+  --surface-hover: #232334;
+  --border: #2a2a3c;
+  --border-strong: #37374d;
+  --text: #ececf5;
+  --text-muted: #a3a3bb;
+  --text-subtle: #75758f;
+  --brand: #8a6dff;
+  --brand-hover: #9d85ff;
+  --brand-soft: #2a2248;
+  --brand-text: #b3a1ff;
+  --success-soft: #16301f;
+  --danger-soft: #3a1c1e;
+  --highlight: #5b4a12;
+  --highlight-active: #8a6d0b;
+  --active-line: #221d3a;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4), 0 4px 16px rgb(0 0 0 / 0.3);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-muted: var(--surface-muted);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-muted: var(--text-muted);
+  --color-subtle: var(--text-subtle);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-soft: var(--brand-soft);
+  --color-brand-text: var(--brand-text);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-warning: var(--warning);
+  --color-highlight: var(--highlight);
+  --color-highlight-active: var(--highlight-active);
+  --color-active-line: var(--active-line);
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --shadow-card: var(--shadow);
+  --radius-card: var(--radius);
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+mark {
+  background: var(--highlight);
+  color: inherit;
+  border-radius: 2px;
+  padding: 0 1px;
+}
+
+mark[data-active="true"] {
+  background: var(--highlight-active);
+}
+
+::selection {
+  background: var(--brand-soft);
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-strong) transparent;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  html,
+  body,
+  main,
+  body > div {
+    height: auto !important;
+    overflow: visible !important;
+    display: block !important;
+    background: white !important;
+  }
+}
