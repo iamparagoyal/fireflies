@@ -232,8 +232,11 @@ def list_meetings(
     sort: schemas.SortOrder,
     page: int,
     page_size: int,
+    sources: list[str] | None = None,
 ) -> tuple[list[models.Meeting], int]:
     conditions = [models.Meeting.owner_id == owner.id]
+    if sources:
+        conditions.append(models.Meeting.source.in_(sources))
     if q:
         like = f"%{q.strip().lower()}%"
         participant_match = (

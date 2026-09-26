@@ -21,6 +21,7 @@ def list_meetings(
     q: str | None = None,
     participant_id: Annotated[list[int], Query()] = [],
     tag_id: Annotated[list[int], Query()] = [],
+    source: Annotated[list[schemas.Source], Query()] = [],
     date_from: datetime | None = None,
     date_to: datetime | None = None,
     sort: schemas.SortOrder = "recent",
@@ -28,7 +29,7 @@ def list_meetings(
     page_size: Annotated[int, Query(ge=1, le=100)] = 50,
 ):
     items, total = meeting_service.list_meetings(
-        db, user, q, participant_id, tag_id, date_from, date_to, sort, page, page_size
+        db, user, q, participant_id, tag_id, date_from, date_to, sort, page, page_size, source
     )
     counts = meeting_service.action_item_counts(db, [m.id for m in items])
     return schemas.MeetingPage(

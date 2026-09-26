@@ -46,6 +46,8 @@ def test_list_filter_search_and_sort(client):
     assert client.get("/api/meetings", params={"q": "alpha"}).json()["total"] == 1
     assert client.get("/api/meetings", params={"q": "sam ortiz"}).json()["total"] == 2
     assert client.get("/api/meetings", params={"date_from": "2026-01-15T00:00:00"}).json()["total"] == 1
+    assert client.get("/api/meetings", params={"source": "upload"}).json()["total"] == 0
+    assert client.get("/api/meetings", params={"source": ["paste", "upload"]}).json()["total"] == 2
 
 
 def test_update_and_delete_meeting(client):
