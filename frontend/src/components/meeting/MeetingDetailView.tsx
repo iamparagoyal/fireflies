@@ -79,7 +79,10 @@ function LoadedMeeting({ meeting, segments }: { meeting: MeetingDetail; segments
     if (!startAt) return;
     seek(startAt);
     const target = segments.findLast((s) => s.start_seconds <= startAt);
-    if (target) requestAnimationFrame(() => document.getElementById(`segment-${target.id}`)?.scrollIntoView({ block: "center" }));
+    if (!target) return;
+    requestAnimationFrame(() => {
+      document.getElementById(`segment-${target.id}`)?.scrollIntoView({ block: "center" });
+    });
   }, [startAt, seek, segments]);
 
   return (

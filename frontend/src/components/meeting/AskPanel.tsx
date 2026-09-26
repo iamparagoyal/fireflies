@@ -27,7 +27,9 @@ export function AskPanel({ meeting }: { meeting: MeetingDetail }) {
   const [pending, setPending] = useState(false);
   const bottomRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => bottomRef.current?.scrollIntoView({ block: "end" }), [messages, pending]);
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ block: "end" });
+  }, [messages, pending]);
 
   const ask = async (question: string) => {
     const q = question.trim();
