@@ -2,7 +2,7 @@
 
 A full-stack clone of the Fireflies.ai meeting workspace. Browse a library of meetings, read interactive transcripts that stay in sync with a media player, review AI summaries, outlines and action items, search across every transcript, and manage meetings end to end.
 
-**Live demo:** _coming soon, deployment in progress_
+**Live demo:** https://fireflies-two.vercel.app
 
 ## Features
 
