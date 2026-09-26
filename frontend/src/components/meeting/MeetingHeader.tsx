@@ -14,9 +14,8 @@ import { api } from "@/lib/api";
 import { formatDuration, formatMeetingDate, platformLabel } from "@/lib/format";
 import { keys, refreshMeetingLists } from "@/lib/queries";
 import type { MeetingDetail } from "@/lib/types";
+import { menuContentClass, menuItemClass, menuDangerItemClass, menuSeparatorClass } from "@/components/ui/menu";
 
-const menuItem = "flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
-const menuContent = "z-50 min-w-48 rounded-lg border border-border bg-surface p-1 shadow-card";
 
 export function MeetingHeader({ meeting, onEdit, onDelete }: { meeting: MeetingDetail; onEdit: () => void; onDelete: () => void }) {
   const [regenerating, setRegenerating] = useState(false);
@@ -42,7 +41,7 @@ export function MeetingHeader({ meeting, onEdit, onDelete }: { meeting: MeetingD
       </Link>
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0">
-          <h1 className="truncate text-lg font-semibold tracking-tight sm:text-xl">{meeting.title}</h1>
+          <h1 className="truncate text-xl font-bold tracking-tight sm:text-2xl">{meeting.title}</h1>
           <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px] text-muted">
             <span className="inline-flex items-center gap-1">
               <Calendar className="size-3.5" /> {formatMeetingDate(meeting.started_at)}
@@ -68,18 +67,18 @@ export function MeetingHeader({ meeting, onEdit, onDelete }: { meeting: MeetingD
               </Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
-              <DropdownMenu.Content align="end" sideOffset={4} className={menuContent}>
-                <DropdownMenu.Item asChild className={menuItem}>
+              <DropdownMenu.Content align="end" sideOffset={4} className={menuContentClass}>
+                <DropdownMenu.Item asChild className={menuItemClass}>
                   <a href={api.exportUrl(meeting.id, "md")} download>
                     <FileText className="size-4" /> Markdown (.md)
                   </a>
                 </DropdownMenu.Item>
-                <DropdownMenu.Item asChild className={menuItem}>
+                <DropdownMenu.Item asChild className={menuItemClass}>
                   <a href={api.exportUrl(meeting.id, "txt")} download>
                     <FileText className="size-4" /> Plain text (.txt)
                   </a>
                 </DropdownMenu.Item>
-                <DropdownMenu.Item asChild className={menuItem}>
+                <DropdownMenu.Item asChild className={menuItemClass}>
                   <Link href={`/meetings/${meeting.id}/print`} target="_blank">
                     <Printer className="size-4" /> PDF (print)
                   </Link>
@@ -94,15 +93,15 @@ export function MeetingHeader({ meeting, onEdit, onDelete }: { meeting: MeetingD
               </Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Portal>
-              <DropdownMenu.Content align="end" sideOffset={4} className={menuContent}>
-                <DropdownMenu.Item className={menuItem} onSelect={onEdit}>
+              <DropdownMenu.Content align="end" sideOffset={4} className={menuContentClass}>
+                <DropdownMenu.Item className={menuItemClass} onSelect={onEdit}>
                   <Pencil className="size-4" /> Edit details
                 </DropdownMenu.Item>
-                <DropdownMenu.Item className={menuItem} disabled={!meeting.segment_count || regenerating} onSelect={() => void regenerate()}>
+                <DropdownMenu.Item className={menuItemClass} disabled={!meeting.segment_count || regenerating} onSelect={() => void regenerate()}>
                   <RefreshCw className={regenerating ? "size-4 animate-spin" : "size-4"} /> Regenerate AI notes
                 </DropdownMenu.Item>
-                <DropdownMenu.Separator className="my-1 h-px bg-border" />
-                <DropdownMenu.Item className={`${menuItem} text-danger`} onSelect={onDelete}>
+                <DropdownMenu.Separator className={menuSeparatorClass} />
+                <DropdownMenu.Item className={menuDangerItemClass} onSelect={onDelete}>
                   <Trash2 className="size-4" /> Delete meeting
                 </DropdownMenu.Item>
               </DropdownMenu.Content>

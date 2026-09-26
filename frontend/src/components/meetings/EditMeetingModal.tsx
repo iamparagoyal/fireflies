@@ -95,7 +95,7 @@ function EditMeetingForm({ meeting, onDone }: { meeting: EditableMeeting; onDone
         <span className="block text-[13px] font-medium">Tags</span>
         <TagPicker value={tagIds} onChange={setTagIds} />
       </div>
-      {error && <p role="alert" className="rounded-lg bg-danger-soft px-3 py-2 text-sm text-danger">{error}</p>}
+      {error && <p role="alert" className="rounded-control bg-danger-soft px-3 py-2 text-sm text-danger">{error}</p>}
     </form>
   );
 }

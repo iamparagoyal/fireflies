@@ -45,7 +45,7 @@ export function CommentThread({ meetingId, segmentId, comments, onClose }: { mee
   };
 
   return (
-    <div className="mt-2 rounded-lg border border-border bg-surface-muted p-3" onClick={(e) => e.stopPropagation()}>
+    <div className="mt-2 rounded-card border border-border bg-surface-muted p-3" onClick={(e) => e.stopPropagation()}>
       {comments.length > 0 && (
         <ul className="mb-3 space-y-2.5">
           {comments.map((c) => (

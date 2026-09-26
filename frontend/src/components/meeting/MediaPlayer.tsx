@@ -42,7 +42,7 @@ export function MediaPlayer({ segments, chapters, mediaUrl }: { segments: Segmen
           <button
             onClick={toggle}
             aria-label={playing ? "Pause" : "Play"}
-            className="flex size-9 items-center justify-center rounded-full bg-brand text-white shadow-sm hover:bg-brand-hover"
+            className="flex size-9 items-center justify-center btn-primary rounded-full transition"
           >
             {playing ? <Pause className="size-4 fill-current" /> : <Play className="ml-0.5 size-4 fill-current" />}
           </button>
@@ -104,7 +104,7 @@ export function MediaPlayer({ segments, chapters, mediaUrl }: { segments: Segmen
           <select
             value={rate}
             onChange={(e) => setRate(Number(e.target.value))}
-            className="h-7 rounded-md border border-border bg-surface px-1.5 text-xs font-medium outline-none"
+            className="h-7 rounded-control border border-border bg-surface px-1.5 text-xs font-medium outline-none"
           >
             {PLAYBACK_RATES.map((r) => (
               <option key={r} value={r}>

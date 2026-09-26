@@ -16,13 +16,13 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   return (
     <NewMeetingContext.Provider value={openNewMeeting}>
       <div className="flex h-full">
-        <aside className="no-print hidden w-[var(--sidebar-width)] shrink-0 border-r border-border bg-surface md:block">
+        <aside className="no-print hidden w-[var(--sidebar-width)] shrink-0 bg-nav md:block">
           <Sidebar />
         </aside>
         {mobileOpen && (
           <div className="fixed inset-0 z-40 md:hidden">
             <div className="absolute inset-0 bg-black/40" onClick={() => setMobileOpen(false)} />
-            <aside className="absolute inset-y-0 left-0 w-64 border-r border-border bg-surface">
+            <aside className="absolute inset-y-0 left-0 w-64 bg-nav">
               <Sidebar onNavigate={() => setMobileOpen(false)} />
             </aside>
           </div>

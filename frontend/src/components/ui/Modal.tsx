@@ -25,23 +25,23 @@ export function Modal({
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-40 bg-black/40 backdrop-blur-[1px]" />
+        <Dialog.Overlay className="fixed inset-0 z-40 bg-[#100730]/50 backdrop-blur-[2px]" />
         <Dialog.Content
           className={cn(
-            "fixed left-1/2 top-1/2 z-50 flex max-h-[88vh] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 flex-col rounded-xl border border-border bg-surface shadow-card focus:outline-none",
+            "fixed left-1/2 top-1/2 z-50 flex max-h-[88vh] w-[calc(100vw-2rem)] -translate-x-1/2 -translate-y-1/2 flex-col rounded-card border border-border bg-surface shadow-dialog focus:outline-none",
             { sm: "max-w-md", md: "max-w-xl", lg: "max-w-3xl" }[size],
           )}
         >
           <div className="flex items-start justify-between gap-4 border-b border-border px-5 py-4">
             <div>
-              <Dialog.Title className="text-base font-semibold">{title}</Dialog.Title>
+              <Dialog.Title className="text-lg font-bold">{title}</Dialog.Title>
               {description ? (
                 <Dialog.Description className="mt-0.5 text-[13px] text-muted">{description}</Dialog.Description>
               ) : (
                 <Dialog.Description className="sr-only">{title}</Dialog.Description>
               )}
             </div>
-            <Dialog.Close className="rounded-md p-1 text-muted hover:bg-surface-hover hover:text-text" aria-label="Close">
+            <Dialog.Close className="rounded-control p-1 text-muted hover:bg-surface-hover hover:text-text" aria-label="Close">
               <X className="size-4" />
             </Dialog.Close>
           </div>

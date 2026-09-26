@@ -114,7 +114,7 @@ export function TranscriptPanel({ meetingId, segments }: { meetingId: number; se
                 } else if (e.key === "Escape") setRawQuery("");
               }}
               placeholder="Search transcript"
-              className="h-8 w-full rounded-lg border border-border bg-surface-muted pl-8 pr-8 text-sm outline-none focus:border-brand focus:bg-surface focus:ring-2 focus:ring-brand/20"
+              className="h-8 w-full rounded-control border border-border bg-surface-muted pl-8 pr-8 text-sm outline-none focus:border-brand focus:bg-surface focus:ring-2 focus:ring-brand/20"
             />
             {rawQuery && (
               <button onClick={() => setRawQuery("")} aria-label="Clear search" className="absolute right-2 top-1/2 -translate-y-1/2 text-subtle hover:text-text">

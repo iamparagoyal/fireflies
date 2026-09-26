@@ -157,7 +157,7 @@ export function NewMeetingModal({
         </>
       }
     >
-      <div role="tablist" aria-label="How to add the meeting" className="mb-5 grid grid-cols-3 gap-1 rounded-lg bg-surface-hover p-1">
+      <div role="tablist" aria-label="How to add the meeting" className="mb-5 grid grid-cols-3 gap-1 rounded-control bg-surface-hover p-1">
         {TABS.map(({ id, label, icon: Icon }) => (
           <button
             key={id}
@@ -169,7 +169,7 @@ export function NewMeetingModal({
               onTabChange(id);
             }}
             className={cn(
-              "flex items-center justify-center gap-2 rounded-md py-1.5 text-[13px] font-medium transition",
+              "flex items-center justify-center gap-2 rounded-control py-1.5 text-[13px] font-medium transition",
               tab === id ? "bg-surface text-text shadow-sm" : "text-muted hover:text-text",
             )}
           >
@@ -193,7 +193,7 @@ export function NewMeetingModal({
             }}
             onClick={() => fileRef.current?.click()}
             className={cn(
-              "flex cursor-pointer flex-col items-center justify-center rounded-xl border-2 border-dashed px-6 py-8 text-center transition",
+              "flex cursor-pointer flex-col items-center justify-center rounded-card border-2 border-dashed px-6 py-8 text-center transition",
               dragging ? "border-brand bg-brand-soft" : "border-border-strong hover:border-brand hover:bg-surface-hover",
             )}
           >
@@ -260,7 +260,7 @@ export function NewMeetingModal({
         )}
 
         {error && (
-          <p role="alert" className="rounded-lg bg-danger-soft px-3 py-2 text-sm text-danger">
+          <p role="alert" className="rounded-control bg-danger-soft px-3 py-2 text-sm text-danger">
             {error}
           </p>
         )}

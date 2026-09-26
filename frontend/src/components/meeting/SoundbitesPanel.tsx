@@ -54,13 +54,13 @@ export function SoundbitesPanel({ meeting }: { meeting: MeetingDetail }) {
 
   return (
     <div>
-      <form onSubmit={create} className="mb-4 rounded-xl border border-border bg-surface-muted p-3">
+      <form onSubmit={create} className="mb-4 rounded-feature bg-surface-muted p-4">
         <p className="mb-2 text-[13px] text-muted">
           Clip a moment starting at the playhead (<span className="font-mono">{formatClock(player.currentTime)}</span>). You can also use the bookmark icon on any transcript line.
         </p>
         <div className="flex flex-wrap gap-2">
           <Input aria-label="Soundbite title" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Soundbite title" className="min-w-40 flex-1" />
-          <select aria-label="Clip length" value={length} onChange={(e) => setLength(Number(e.target.value))} className="h-9 rounded-lg border border-border bg-surface px-2 text-sm">
+          <select aria-label="Clip length" value={length} onChange={(e) => setLength(Number(e.target.value))} className="h-9 rounded-control border border-border bg-surface px-2 text-sm">
             {[15, 30, 60, 120].map((s) => (
               <option key={s} value={s}>
                 {s}s
@@ -77,7 +77,7 @@ export function SoundbitesPanel({ meeting }: { meeting: MeetingDetail }) {
       ) : (
         <ul className="space-y-2">
           {meeting.soundbites.map((s) => (
-            <li key={s.id} className="group flex items-center gap-3 rounded-lg border border-border bg-surface px-3 py-2">
+            <li key={s.id} className="card group flex items-center gap-3 px-3 py-2">
               <Timestamp seconds={s.start_seconds} withIcon />
               <div className="min-w-0 flex-1">
                 <p className="truncate text-sm font-medium">{s.title}</p>

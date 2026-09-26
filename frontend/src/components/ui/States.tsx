@@ -13,7 +13,7 @@ export function Spinner({ className }: { className?: string }) {
 }
 
 export function Skeleton({ className }: { className?: string }) {
-  return <div className={cn("animate-pulse rounded-md bg-surface-hover", className)} />;
+  return <div className={cn("animate-pulse rounded-control bg-surface-hover", className)} />;
 }
 
 export function EmptyState({
@@ -41,7 +41,7 @@ export function EmptyState({
 
 export function ErrorState({ message, onRetry }: { message: string; onRetry?: () => void }) {
   return (
-    <div className="rounded-lg border border-danger/30 bg-danger-soft px-4 py-3 text-sm text-danger">
+    <div className="rounded-control border border-danger/30 bg-danger-soft px-4 py-3 text-sm text-danger">
       {message}
       {onRetry && (
         <button onClick={onRetry} className="ml-2 font-medium underline">

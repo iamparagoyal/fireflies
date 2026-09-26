@@ -45,7 +45,7 @@ export function NotesPanel({ meeting }: { meeting: MeetingDetail }) {
             <Section icon={<Tags className="size-3.5" />} title="Keywords">
               <div className="flex flex-wrap gap-1.5">
                 {summary.keywords.map((k) => (
-                  <span key={k} className="rounded-md bg-surface-hover px-2 py-0.5 text-xs font-medium text-text">
+                  <span key={k} className="rounded-control bg-surface-hover px-2 py-0.5 text-xs font-medium text-text">
                     {k}
                   </span>
                 ))}
@@ -77,7 +77,7 @@ export function NotesPanel({ meeting }: { meeting: MeetingDetail }) {
                 <button
                   onClick={() => player.seek(c.start_seconds, { play: true })}
                   aria-current={c.id === currentChapter ? "step" : undefined}
-                  className="w-full rounded-lg px-2.5 py-2 text-left transition hover:bg-surface-hover aria-[current=step]:bg-brand-soft"
+                  className="w-full rounded-control px-2.5 py-2 text-left transition hover:bg-surface-hover aria-[current=step]:bg-brand-soft"
                 >
                   <span className="flex items-baseline gap-2">
                     <span className="font-mono text-xs tabular-nums text-brand-text">{formatClock(c.start_seconds)}</span>

@@ -44,7 +44,7 @@ export const TranscriptLine = memo(function TranscriptLine({
       id={`segment-${segment.id}`}
       data-active={active || undefined}
       className={cn(
-        "group relative flex gap-3 rounded-lg px-3 py-2.5 transition-colors",
+        "group relative flex gap-3 rounded-control px-3 py-2.5 transition-colors",
         active ? "bg-active-line" : "hover:bg-surface-muted",
       )}
     >
@@ -82,7 +82,7 @@ export const TranscriptLine = memo(function TranscriptLine({
         </div>
         <p
           onClick={() => onSeek(segment)}
-          className="mt-0.5 cursor-pointer text-[14px] leading-relaxed text-text/90"
+          className="mt-0.5 cursor-pointer text-base leading-relaxed text-text"
           data-testid="segment-text"
         >
           {splitHighlights(segment.text, query).map((part, i) => {

@@ -10,8 +10,8 @@ import { formatDuration, formatMeetingDate } from "@/lib/format";
 import type { MeetingListItem } from "@/lib/types";
 
 import { PlatformIcon } from "./PlatformIcon";
+import { menuContentClass, menuItemClass, menuDangerItemClass } from "@/components/ui/menu";
 
-const menuItem = "flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm outline-none data-[highlighted]:bg-surface-hover";
 
 export function MeetingRow({ meeting, onEdit, onDelete }: { meeting: MeetingListItem; onEdit?: () => void; onDelete?: () => void }) {
   return (
@@ -41,15 +41,15 @@ export function MeetingRow({ meeting, onEdit, onDelete }: { meeting: MeetingList
       </div>
       {onEdit && onDelete && (
       <DropdownMenu.Root>
-        <DropdownMenu.Trigger className="relative z-10 rounded-md p-1.5 text-muted opacity-100 hover:bg-surface-hover hover:text-text sm:opacity-0 sm:group-hover:opacity-100 data-[state=open]:opacity-100" aria-label={`Actions for ${meeting.title}`}>
+        <DropdownMenu.Trigger className="relative z-10 rounded-control p-1.5 text-muted opacity-100 hover:bg-surface-hover hover:text-text sm:opacity-0 sm:group-hover:opacity-100 data-[state=open]:opacity-100" aria-label={`Actions for ${meeting.title}`}>
           <MoreHorizontal className="size-4" />
         </DropdownMenu.Trigger>
         <DropdownMenu.Portal>
-          <DropdownMenu.Content align="end" sideOffset={4} className="z-50 min-w-40 rounded-lg border border-border bg-surface p-1 shadow-card">
-            <DropdownMenu.Item className={menuItem} onSelect={onEdit}>
+          <DropdownMenu.Content align="end" sideOffset={4} className={menuContentClass}>
+            <DropdownMenu.Item className={menuItemClass} onSelect={onEdit}>
               <Pencil className="size-4" /> Edit details
             </DropdownMenu.Item>
-            <DropdownMenu.Item className={`${menuItem} text-danger`} onSelect={onDelete}>
+            <DropdownMenu.Item className={menuDangerItemClass} onSelect={onDelete}>
               <Trash2 className="size-4" /> Delete
             </DropdownMenu.Item>
           </DropdownMenu.Content>

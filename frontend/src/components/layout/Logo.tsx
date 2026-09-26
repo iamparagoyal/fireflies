@@ -12,7 +12,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         <rect width="32" height="32" rx="8" fill="url(#logo-gradient)" />
         <path d="M9 9h14v4H13v3h8v4h-8v3H9z" fill="white" />
       </svg>
-      {!compact && <span className="text-[17px] font-bold tracking-tight">fireflies</span>}
+      {!compact && <span className="text-lg font-bold tracking-tight text-nav-text">fireflies</span>}
     </span>
   );
 }

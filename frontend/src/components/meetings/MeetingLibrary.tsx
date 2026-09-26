@@ -56,7 +56,7 @@ export function MeetingLibrary({ title, subtitle, sources }: { title: string; su
     <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6">
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <h1 className="text-xl font-semibold tracking-tight">{title}</h1>
+          <h1 className="text-2xl font-bold tracking-tight">{title}</h1>
           <p className="mt-0.5 text-sm text-muted">
             {subtitle}
             {data && <> · {data.total} {data.total === 1 ? "meeting" : "meetings"}</>}
@@ -69,7 +69,7 @@ export function MeetingLibrary({ title, subtitle, sources }: { title: string; su
 
       <MeetingFilters value={filters} onChange={updateFilters} />
 
-      <div className="mt-4 overflow-hidden rounded-xl border border-border bg-surface shadow-card">
+      <div className="mt-4 overflow-hidden card">
         {error ? (
           <div className="p-4">
             <ErrorState message="Couldn't load meetings. Is the backend running?" onRetry={() => mutate()} />

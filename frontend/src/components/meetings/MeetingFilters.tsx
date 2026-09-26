@@ -59,7 +59,7 @@ export function MeetingFilters({ value, onChange }: { value: Filters; onChange: 
         <option value="title">Title A–Z</option>
       </Select>
       {hasFilters && (
-        <button onClick={() => onChange({ sort: value.sort })} className="inline-flex items-center gap-1 rounded-lg px-2 py-1.5 text-sm font-medium text-muted hover:bg-surface-hover hover:text-text">
+        <button onClick={() => onChange({ sort: value.sort })} className="inline-flex items-center gap-1 rounded-control px-2 py-1.5 text-sm font-medium text-muted hover:bg-surface-hover hover:text-text">
           <X className="size-3.5" /> Clear
         </button>
       )}

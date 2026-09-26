@@ -12,10 +12,8 @@ import { Avatar } from "@/components/ui/Avatar";
 import { Button, IconButton } from "@/components/ui/Button";
 import { useMe } from "@/lib/queries";
 import { useMounted } from "@/lib/useMounted";
+import { menuContentClass, menuItemClass } from "@/components/ui/menu";
 
-const menuItem =
-  "flex cursor-pointer items-center gap-2 rounded-md px-2 py-1.5 text-sm text-text outline-none data-[highlighted]:bg-surface-hover";
-const menuContent = "z-50 min-w-52 rounded-lg border border-border bg-surface p-1 shadow-card";
 
 export function GlobalSearch({ className }: { className?: string }) {
   const router = useRouter();
@@ -36,7 +34,7 @@ export function GlobalSearch({ className }: { className?: string }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search across all your meetings…"
-          className="h-9 w-full rounded-lg border border-border bg-surface-muted pl-9 pr-3 text-sm outline-none transition placeholder:text-subtle focus:border-brand focus:bg-surface focus:ring-2 focus:ring-brand/20"
+          className="h-9 w-full rounded-control border border-border bg-surface-muted pl-9 pr-3 text-sm outline-none transition placeholder:text-subtle focus:border-brand focus:bg-surface focus:ring-2 focus:ring-brand/20"
         />
       </label>
     </form>
@@ -73,8 +71,8 @@ export function Topbar({ onOpenMenu }: { onOpenMenu: () => void }) {
             </IconButton>
           </DropdownMenu.Trigger>
           <DropdownMenu.Portal>
-            <DropdownMenu.Content align="end" sideOffset={6} className={menuContent}>
-              <div className="px-3 py-6 text-center text-sm text-muted">You&apos;re all caught up 🎉</div>
+            <DropdownMenu.Content align="end" sideOffset={6} className={menuContentClass}>
+              <div className="px-3 py-6 text-center text-sm text-nav-muted">You&apos;re all caught up 🎉</div>
             </DropdownMenu.Content>
           </DropdownMenu.Portal>
         </DropdownMenu.Root>
@@ -83,22 +81,22 @@ export function Topbar({ onOpenMenu }: { onOpenMenu: () => void }) {
             <Avatar name={me?.user.name ?? "User"} color={me?.user.avatar_color} size="md" />
           </DropdownMenu.Trigger>
           <DropdownMenu.Portal>
-            <DropdownMenu.Content align="end" sideOffset={6} className={menuContent}>
-              <div className="border-b border-border px-2 pb-2 pt-1">
+            <DropdownMenu.Content align="end" sideOffset={6} className={menuContentClass}>
+              <div className="mb-1 border-b border-white/10 px-3 pb-2 pt-1">
                 <p className="text-sm font-semibold">{me?.user.name}</p>
-                <p className="text-xs text-muted">{me?.user.email}</p>
+                <p className="text-xs text-nav-muted">{me?.user.email}</p>
               </div>
-              <DropdownMenu.Item asChild className={menuItem}>
+              <DropdownMenu.Item asChild className={menuItemClass}>
                 <Link href="/settings">
                   <User className="size-4" /> Profile
                 </Link>
               </DropdownMenu.Item>
-              <DropdownMenu.Item asChild className={menuItem}>
+              <DropdownMenu.Item asChild className={menuItemClass}>
                 <Link href="/settings">
                   <Settings className="size-4" /> Settings
                 </Link>
               </DropdownMenu.Item>
-              <DropdownMenu.Item className={menuItem} onSelect={() => toast.info("Authentication is mocked", { description: "You're always signed in as the demo user." })}>
+              <DropdownMenu.Item className={menuItemClass} onSelect={() => toast.info("Authentication is mocked", { description: "You're always signed in as the demo user." })}>
                 <LogOut className="size-4" /> Sign out
               </DropdownMenu.Item>
             </DropdownMenu.Content>

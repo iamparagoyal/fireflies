@@ -13,7 +13,7 @@ const styles: Record<string, string> = {
 export function PlatformIcon({ platform, className }: { platform: string; className?: string }) {
   const Icon = platform === "upload" ? FileText : Video;
   return (
-    <span title={platformLabel(platform)} className={cn("inline-flex size-9 shrink-0 items-center justify-center rounded-lg", styles[platform] ?? styles.upload, className)}>
+    <span title={platformLabel(platform)} className={cn("inline-flex size-9 shrink-0 items-center justify-center rounded-control", styles[platform] ?? styles.upload, className)}>
       <Icon className="size-[18px]" />
     </span>
   );

@@ -42,7 +42,7 @@ export function TasksView() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
-      <h1 className="text-xl font-semibold tracking-tight">Action Items</h1>
+      <h1 className="text-2xl font-bold tracking-tight">Action Items</h1>
       <p className="mt-0.5 text-sm text-muted">Tasks extracted from all of your meetings</p>
       <div role="tablist" className="mt-5 flex gap-1 border-b border-border">
         {(["open", "done", "all"] as const).map((f) => (
@@ -69,7 +69,7 @@ export function TasksView() {
         ) : items.length === 0 ? (
           <EmptyState icon={<CheckCircle2 className="size-5" />} title={filter === "open" ? "Nothing left to do" : "No action items"} description={filter === "open" ? "Every action item across your meetings is complete." : undefined} />
         ) : (
-          <ul className="divide-y divide-border overflow-hidden rounded-xl border border-border bg-surface shadow-card">
+          <ul className="divide-y divide-border overflow-hidden card">
             {items.map((item) => (
               <li key={item.id} className="flex items-start gap-3 px-4 py-3">
                 <button onClick={() => toggle(item)} aria-label={item.is_completed ? `Mark “${item.text}” as not done` : `Mark “${item.text}” as done`} className="mt-0.5 text-muted hover:text-brand">

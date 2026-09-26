@@ -43,13 +43,13 @@ function NavLink({ href, label, icon: Icon, soon, onNavigate }: { href: string; 
       onClick={onNavigate}
       aria-current={active ? "page" : undefined}
       className={cn(
-        "group flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-        active ? "bg-brand-soft text-brand-text" : "text-muted hover:bg-surface-hover hover:text-text",
+        "group flex items-center gap-3 rounded-control px-3 py-2 text-sm font-medium transition-colors",
+        active ? "bg-nav-active text-nav-active-text" : "text-nav-muted hover:bg-nav-hover hover:text-nav-text",
       )}
     >
       <Icon className="size-[18px]" />
       <span className="flex-1">{label}</span>
-      {soon && <span className="rounded bg-surface-hover px-1.5 py-0.5 text-[10px] font-semibold uppercase text-subtle">Soon</span>}
+      {soon && <span className="rounded-control bg-white/10 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-nav-muted">Soon</span>}
     </Link>
   );
 }
@@ -57,8 +57,8 @@ function NavLink({ href, label, icon: Icon, soon, onNavigate }: { href: string; 
 export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   const openNewMeeting = useOpenNewMeeting();
   return (
-    <nav className="flex h-full flex-col gap-1 px-3 py-4" aria-label="Main">
-      <Link href="/meetings" className="mb-4 px-2" onClick={onNavigate}>
+    <nav className="flex h-full flex-col gap-1 bg-nav px-3 py-4 text-nav-text" aria-label="Main">
+      <Link href="/meetings" className="mb-5 px-2" onClick={onNavigate}>
         <Logo />
       </Link>
       <button
@@ -66,14 +66,14 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           onNavigate?.();
           openNewMeeting("upload");
         }}
-        className="mb-3 flex items-center justify-center gap-2 rounded-lg bg-brand px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-brand-hover"
+        className="btn-primary mb-4 flex items-center justify-center gap-2 rounded-control px-3 py-2 text-sm font-medium transition"
       >
         <Upload className="size-4" /> Upload meeting
       </button>
       {primary.map((item) => (
         <NavLink key={item.href} {...item} onNavigate={onNavigate} />
       ))}
-      <div className="mx-3 my-3 border-t border-border" />
+      <div className="mx-3 my-3 border-t border-white/10" />
       {secondary.map((item) => (
         <NavLink key={item.href} {...item} onNavigate={onNavigate} />
       ))}

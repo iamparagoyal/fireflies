@@ -10,7 +10,7 @@ import { useMe } from "@/lib/queries";
 
 function Card({ title, description, children, soon }: { title: string; description: string; children: React.ReactNode; soon?: boolean }) {
   return (
-    <section className="rounded-xl border border-border bg-surface p-5 shadow-card">
+    <section className="card p-6">
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
           <h2 className="text-[15px] font-semibold">{title}</h2>
@@ -33,7 +33,7 @@ export function SettingsView() {
   return (
     <div className="mx-auto max-w-3xl space-y-5 px-4 py-6 sm:px-6">
       <div>
-        <h1 className="text-xl font-semibold tracking-tight">Settings</h1>
+        <h1 className="text-2xl font-bold tracking-tight">Settings</h1>
         <p className="mt-0.5 text-sm text-muted">Manage your profile, preferences and integrations</p>
       </div>
 
@@ -75,7 +75,7 @@ export function SettingsView() {
       <Card title="Integrations" description="Connect your calendar, conferencing and CRM tools." soon>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
           {INTEGRATIONS.map((name) => (
-            <button key={name} onClick={soon} className="rounded-lg border border-border px-3 py-2.5 text-left text-sm font-medium hover:bg-surface-hover">
+            <button key={name} onClick={soon} className="rounded-control border border-border px-3 py-2.5 text-left text-sm font-medium hover:bg-surface-hover">
               {name}
               <span className="block text-xs font-normal text-subtle">Connect</span>
             </button>

@@ -88,7 +88,7 @@ function ActionItemRow({
   };
 
   return (
-    <li className="group rounded-lg border border-border bg-surface px-3 py-2.5">
+    <li className="card card-hover group px-3 py-2.5">
       <div className="flex items-start gap-2.5">
         <input
           type="checkbox"
@@ -127,7 +127,7 @@ function ActionItemRow({
               aria-label="Assignee"
               value={item.assignee?.id ?? ""}
               onChange={(e) => onUpdate({ assignee_id: e.target.value ? Number(e.target.value) : null })}
-              className="h-6 rounded-md border border-border bg-surface-muted px-1.5 text-xs outline-none"
+              className="h-6 rounded-control border border-border bg-surface-muted px-1.5 text-xs outline-none"
             >
               <option value="">Unassigned</option>
               {participants.map((p) => (
@@ -143,7 +143,7 @@ function ActionItemRow({
                 type="date"
                 value={item.due_date ?? ""}
                 onChange={(e) => onUpdate({ due_date: e.target.value || null })}
-                className="h-6 rounded-md border border-border bg-surface-muted px-1 text-xs outline-none"
+                className="h-6 rounded-control border border-border bg-surface-muted px-1 text-xs outline-none"
               />
             </label>
             {item.due_date && !item.is_completed && <span className="text-muted">Due {formatShortDate(item.due_date)}</span>}

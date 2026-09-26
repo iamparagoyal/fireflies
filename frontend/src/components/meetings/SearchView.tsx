@@ -36,7 +36,7 @@ export function SearchView() {
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-6 sm:px-6">
-      <h1 className="text-xl font-semibold tracking-tight">Search</h1>
+      <h1 className="text-2xl font-bold tracking-tight">Search</h1>
       <p className="mt-0.5 text-sm text-muted">Find any moment across every meeting transcript</p>
       <label className="relative mt-4 block">
         <span className="sr-only">Search query</span>
@@ -60,7 +60,7 @@ export function SearchView() {
             {data.meetings.length > 0 && (
               <section>
                 <h2 className="mb-2 text-xs font-semibold uppercase tracking-wide text-subtle">Meetings · {data.meetings.length}</h2>
-                <ul className="overflow-hidden rounded-xl border border-border bg-surface shadow-card">
+                <ul className="overflow-hidden card">
                   {data.meetings.map((m) => (
                     <MeetingRow key={m.id} meeting={m} />
                   ))}
@@ -73,7 +73,7 @@ export function SearchView() {
                 <ul className="space-y-2">
                   {data.hits.map((hit) => (
                     <li key={hit.segment_id}>
-                      <Link href={`/meetings/${hit.meeting_id}?t=${Math.floor(hit.start_seconds)}`} className="block rounded-xl border border-border bg-surface px-4 py-3 shadow-card transition hover:border-brand">
+                      <Link href={`/meetings/${hit.meeting_id}?t=${Math.floor(hit.start_seconds)}`} className="card card-hover block px-4 py-3 hover:border-brand">
                         <div className="flex flex-wrap items-center gap-2 text-xs text-muted">
                           <span className="font-semibold text-text">{hit.meeting_title}</span>
                           <span>{formatMeetingDate(hit.meeting_started_at)}</span>

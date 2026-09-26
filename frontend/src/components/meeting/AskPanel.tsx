@@ -51,7 +51,7 @@ export function AskPanel({ meeting }: { meeting: MeetingDetail }) {
     <div className="flex h-full min-h-0 flex-col">
       <div className="scrollbar-thin min-h-0 flex-1 space-y-4 overflow-y-auto pb-4">
         {messages.length === 0 && (
-          <div className="rounded-xl border border-border bg-gradient-to-br from-brand-soft to-surface p-4">
+          <div className="rounded-feature bg-gradient-to-br from-brand-soft to-surface p-4">
             <p className="flex items-center gap-2 text-sm font-semibold">
               <Sparkles className="size-4 text-brand" /> Ask anything about this meeting
             </p>
@@ -78,7 +78,7 @@ export function AskPanel({ meeting }: { meeting: MeetingDetail }) {
             )}
             <div
               className={cn(
-                "max-w-[85%] rounded-xl px-3 py-2 text-[14px] leading-relaxed",
+                "max-w-[85%] rounded-card px-3 py-2 text-[14px] leading-relaxed",
                 m.role === "user" ? "bg-brand text-white" : m.error ? "bg-danger-soft text-danger" : "bg-surface-hover",
               )}
             >
@@ -110,7 +110,7 @@ export function AskPanel({ meeting }: { meeting: MeetingDetail }) {
           e.preventDefault();
           void ask(draft);
         }}
-        className="flex items-center gap-2 rounded-xl border border-border bg-surface p-1.5 focus-within:border-brand"
+        className="flex items-center gap-2 rounded-card border border-border bg-surface p-1.5 focus-within:border-brand"
       >
         <input
           aria-label="Ask a question about this meeting"
@@ -120,7 +120,7 @@ export function AskPanel({ meeting }: { meeting: MeetingDetail }) {
           className="flex-1 bg-transparent px-2 text-sm outline-none placeholder:text-subtle"
           disabled={!meeting.segment_count}
         />
-        <button type="submit" disabled={!draft.trim() || pending} aria-label="Send question" className="rounded-lg bg-brand p-2 text-white disabled:opacity-40">
+        <button type="submit" disabled={!draft.trim() || pending} aria-label="Send question" className="btn-primary rounded-control p-2 transition">
           <Send className="size-4" />
         </button>
       </form>
