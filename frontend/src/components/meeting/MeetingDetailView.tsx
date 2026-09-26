@@ -89,7 +89,7 @@ function LoadedMeeting({ meeting, segments }: { meeting: MeetingDetail; segments
     <PlayerProvider value={player}>
       <div className="flex h-full min-h-0 flex-col">
         <MeetingHeader meeting={meeting} onEdit={() => setEditing(true)} onDelete={() => deletion.setTarget(meeting)} />
-        <div className="grid min-h-0 flex-1 grid-rows-[minmax(0,1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:grid-rows-1">
+        <div className="grid min-h-0 flex-1 grid-cols-[minmax(0,1fr)] grid-rows-[minmax(0,1fr)_minmax(0,1fr)] lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:grid-rows-1">
           <section className="flex min-h-0 flex-col border-b border-border bg-surface lg:border-b-0 lg:border-r" aria-label="Meeting notes">
             <div role="tablist" aria-label="Meeting sections" className="scrollbar-thin flex shrink-0 gap-1 overflow-x-auto border-b border-border px-3">
               {TABS.map(({ id, label, icon: Icon }) => (
