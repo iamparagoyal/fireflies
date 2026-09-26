@@ -1,0 +1,548 @@
+{
+  "title": "Weekly Product Sync",
+  "days_ago": 2,
+  "start_time": "10:00",
+  "platform": "google_meet",
+  "participants": [
+    {
+      "name": "Maya Chen",
+      "email": "maya.chen@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Derek Osei",
+      "email": "derek.osei@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Aisha Rahman",
+      "email": "aisha.rahman@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Tom Bennett",
+      "email": "tom.bennett@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Jordan Blake",
+      "email": "jordan.blake@northwindlabs.io",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Product",
+    "Internal"
+  ],
+  "transcript": [
+    {
+      "speaker": "Maya Chen",
+      "start": 0.0,
+      "end": 12.8,
+      "text": "Okay, I think we're all here, let's get started. Thanks everyone for hopping on, I know Friday afternoons right before a long weekend aren't anyone's favorite time slot for a status meeting."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 13.8,
+      "end": 21.4,
+      "text": "Ha, speak for yourself, I love a good Friday sync, gets everything off my plate before I log off."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 22.4,
+      "end": 36.8,
+      "text": "Noted. Alright, quick agenda, metrics first, then engineering, design, CS, and marketing, and we'll close out with actions and owners so nothing falls through the cracks like last week. Should take twenty minutes, twenty five tops."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 37.8,
+      "end": 44.2,
+      "text": "Sounds good, I've got a customer call right after so I appreciate us keeping to time."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 45.2,
+      "end": 60.4,
+      "text": "Will do my best. Cool, so starting with the numbers. Churn for August came in at two point one percent, that's down from two point six last month, which is honestly the best print we've had since January."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 61.4,
+      "end": 69.4,
+      "text": "Nice, that's the lowest we've hit all year, right? What's driving that, anything specific or just general blocking and tackling?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 70.4,
+      "end": 88.4,
+      "text": "Bit of both. Net new MRR was fourteen thousand two hundred, a bit under our eighteen K target but still solid growth, and gross revenue retention held at ninety six percent, so the base is healthy even if new logo growth is a touch slow."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 89.4,
+      "end": 93.8,
+      "text": "What pulled churn down versus prior months, do we know exactly?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 94.8,
+      "end": 111.6,
+      "text": "Two logos churned this month, both small accounts under five hundred a month in MRR, one was a straight up budget cut on their end going into their fiscal year end, the other just went quiet after their champion left the company."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 112.6,
+      "end": 129.0,
+      "text": "Yeah that second one was Blume Analytics, I tried to save it, jumped on three calls in two weeks, but their champion, a guy named Diego, left for a competitor and nobody internally picked up the relationship after he gave notice."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 130.0,
+      "end": 148.4,
+      "text": "Right, that's the classic single-threaded account problem, we talk about it every quarter and it keeps biting us. Weekly active users though, that's up nicely, thirty one thousand four hundred, up from twenty eight nine last week, so almost a nine percent bump week over week."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 149.4,
+      "end": 159.8,
+      "text": "That tracks with the webinar we ran Tuesday on cohort analysis, we saw a spike in trial signups right after, probably two hundred or so incremental."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 160.8,
+      "end": 170.8,
+      "text": "Good, we'll keep an eye on whether that sticks past this week or it's just a temporary bump. Okay, let's move on, Derek, engineering update?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 171.8,
+      "end": 186.6,
+      "text": "Sure. Big one is the Snowflake integration, we're about seventy percent done, the OAuth flow is working end to end in staging now, and we finished the schema mapping layer yesterday, which honestly was the trickiest part."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 187.6,
+      "end": 192.4,
+      "text": "Is that the one Acme keeps asking about in every single QBR?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 193.4,
+      "end": 205.0,
+      "text": "That's the one. We're targeting a beta release by October fifteenth, so roughly three weeks out from today, assuming QA doesn't find anything nasty in the data sync layer."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 206.0,
+      "end": 215.6,
+      "text": "Can we get that in front of Acme before their contract renewal? Sam mentioned it's become a real sticking point in the renewal conversation."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 216.6,
+      "end": 227.8,
+      "text": "If beta holds on schedule, yeah, we could get them early access maybe October tenth, five days ahead of general beta, as a private preview just for them."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 228.8,
+      "end": 245.2,
+      "text": "Let's do that, I'll loop in Sam so he can position it in the renewal conversation properly. Derek, can you send me the staging demo link today so I can see it working end to end myself before we promise anything?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 246.2,
+      "end": 250.6,
+      "text": "Yeah, I'll send that over today, probably within the hour actually."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 251.6,
+      "end": 255.6,
+      "text": "Great, appreciate it. What else is on the sprint plate?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 256.6,
+      "end": 274.6,
+      "text": "Sprint 42 planning is Monday morning, we're picking up the real time alerting epic and some bug fixes on the SQL query builder, there's a nasty pagination bug when result sets go over ten thousand rows, the query just times out instead of paginating properly."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 275.6,
+      "end": 280.4,
+      "text": "Oh, is that the one Globex reported during their onboarding this week?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 281.4,
+      "end": 293.4,
+      "text": "Yep, same one, they hit it on day two which was not a great first impression. Ravi's already got a fix branched though, should land by Wednesday at the latest."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 294.4,
+      "end": 303.6,
+      "text": "Good, that's been open two weeks, glad it's finally moving before it becomes a pattern in reviews. Anything blocking the team right now?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 304.6,
+      "end": 313.0,
+      "text": "Just need design sign off on the new alert configuration modal, Tom's team has the mocks sitting in Figma since Tuesday."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 314.0,
+      "end": 320.8,
+      "text": "Yeah I can do that review Monday morning before your planning meeting if that helps unblock things."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 321.8,
+      "end": 324.8,
+      "text": "Perfect, that unblocks us, appreciate it Tom."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 325.8,
+      "end": 330.2,
+      "text": "Alright, speaking of design, Tom, how's the dashboard redesign coming along?"
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 331.2,
+      "end": 349.2,
+      "text": "Good progress overall. We finished the second round of user interviews, eight customers total across different segments, and the biggest theme by far is that people want customizable widget layouts, drag and drop, basically a bento box style dashboard instead of our current fixed grid."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 350.2,
+      "end": 356.2,
+      "text": "That's a bigger lift than I think we scoped originally when this project kicked off."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 357.2,
+      "end": 374.4,
+      "text": "It is, yeah, the underlying grid engine has to support arbitrary resizing which we didn't plan for. I've got a critique session booked for Wednesday with the full design team to pressure test the grid system before we hand anything off to engineering."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 375.4,
+      "end": 388.6,
+      "text": "Can I sit in on that? A couple of my accounts, Northstar especially, specifically asked about layout flexibility in their last QBR and I'd love to bring real customer language into the room."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 389.6,
+      "end": 396.0,
+      "text": "Absolutely, that would actually be really useful, I'll send you the invite right after this call."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 397.0,
+      "end": 404.2,
+      "text": "Good, customer voice in the room always helps us avoid over-engineering the wrong thing. Okay Aisha, CS update?"
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 405.2,
+      "end": 421.6,
+      "text": "Sure. Overall health scores across the book are steady, mostly greens, but I want to flag Acme specifically, their product usage dropped about eighteen percent month over month, mostly because their data engineering lead has been out on leave since mid-August."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 422.6,
+      "end": 427.8,
+      "text": "Is that the renewal that's coming up in the next month or so?"
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 428.8,
+      "end": 442.8,
+      "text": "Yes, renewal is in six weeks, mid-November. Sam's leading the commercial side of the account but I'm doing a health check call with their team Tuesday to make sure adoption doesn't slip further before then."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 443.8,
+      "end": 454.2,
+      "text": "Okay, keep us posted closely on that one, it's a forty two thousand dollar ARR account and we really don't want surprises this close to renewal."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 455.2,
+      "end": 473.2,
+      "text": "Understood, I'll report back after Tuesday's call either way. On the positive side though, Globex onboarding kicked off this week and it went really well, their IT lead Ethan is sharp and moving fast, we already had two of their teams live by day three."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 474.2,
+      "end": 478.2,
+      "text": "Nice, that's the healthcare analytics company out of Denver, right?"
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 479.2,
+      "end": 491.2,
+      "text": "Yep, two hundred and ten seats total, it's the biggest onboarding we've had this quarter by a wide margin, and their exec sponsor already asked about the Snowflake integration too."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 492.2,
+      "end": 498.2,
+      "text": "Great win, good to hear onboarding is smooth given the size. Alright Jordan, marketing update?"
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 499.2,
+      "end": 512.0,
+      "text": "So the Q4 campaign, we're calling it Data Driven Or Die internally, launches October first. Budget's forty five thousand across paid social, a handful of industry newsletters, and one three-part webinar series."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 513.0,
+      "end": 517.4,
+      "text": "How'd the creative testing go, did we land on a direction?"
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 518.4,
+      "end": 533.2,
+      "text": "Good, the version with the customer testimonial from Northstar Logistics outperformed the generic feature messaging by almost double on click through rate in our A/B test, so we're leaning heavily into customer proof for the whole campaign."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 534.2,
+      "end": 539.8,
+      "text": "Makes sense, people trust other people more than they trust us talking about ourselves."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 540.8,
+      "end": 557.6,
+      "text": "Exactly. We're finalizing the landing page copy this week, and I need someone from product to review the feature claims before it goes live, mainly want to make sure we're not overselling the Snowflake stuff before it's actually shipped and generally available."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 558.6,
+      "end": 573.4,
+      "text": "Good catch, let's definitely not promise Snowflake support in the headline since it's still in beta with limited access. Derek, can you or someone on your team review the landing page copy by Monday end of day?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 574.4,
+      "end": 582.8,
+      "text": "Yeah, I'll take a look myself, just send it my way whenever it's ready and I'll turn it around same day."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 583.8,
+      "end": 588.2,
+      "text": "Will do, thanks, I'll get it to you by Monday morning."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 589.2,
+      "end": 603.2,
+      "text": "Okay, last thing from me before we wrap, I want to flag we're behind on the frontend engineer hire, we've had the req open six weeks now and it's starting to affect the redesign timeline."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 604.2,
+      "end": 617.8,
+      "text": "Yeah, we finally have a strong candidate though, Priya Nair, she's interviewing Thursday with me and Sofia. If that goes well I think we move fast and get an offer out within a week."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 618.8,
+      "end": 626.0,
+      "text": "Good, fingers crossed, we really need the headcount for the dashboard rebuild. Anything else before we wrap up?"
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 627.0,
+      "end": 639.0,
+      "text": "One thing, I need the updated pricing one pager for the Globex expansion conversation, the current one still shows the old Growth tier pricing from before the June price change."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 640.0,
+      "end": 648.8,
+      "text": "Oh good catch, that's definitely stale then. I'll get that updated and send it over to you by end of day Monday."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 649.8,
+      "end": 655.0,
+      "text": "Perfect, thank you, that'll help a lot with their expansion conversation next week."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 656.0,
+      "end": 666.4,
+      "text": "And separately, I'll need final go ahead on the webinar speaker list by Friday so I can send invites out to the external speakers in time."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 667.4,
+      "end": 673.4,
+      "text": "I'll review the list this weekend and get you a decision by Friday morning, promise."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 674.4,
+      "end": 677.4,
+      "text": "Great, appreciate it, that's all from me."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 678.4,
+      "end": 700.8,
+      "text": "Alright, I think that covers everything. Quick recap before we drop, Derek sends me the Snowflake demo link today, Tom's critique session is Wednesday with Aisha joining, Aisha does the Acme health check Tuesday, Jordan gets the landing page over to Derek for review Monday, and I handle the pricing sheet plus the webinar speaker decision."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 701.8,
+      "end": 705.0,
+      "text": "Sounds right to me, I've got my pieces."
+    },
+    {
+      "speaker": "Tom Bennett",
+      "start": 706.0,
+      "end": 709.0,
+      "text": "Yep, all good on my end too."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 710.0,
+      "end": 714.8,
+      "text": "Great, thanks everyone, have a good weekend, talk to you all Monday."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 715.8,
+      "end": 719.8,
+      "text": "You too, bye all, good luck with the interview Derek."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 720.8,
+      "end": 723.8,
+      "text": "Later everyone, enjoy the weekend."
+    }
+  ],
+  "summary": {
+    "overview": "The Northwind Labs product team held their weekly sync covering August metrics, engineering progress on the Snowflake integration, and updates from design, customer success, and marketing. Churn improved to 2.1% while weekly active users grew, though Acme's usage dip ahead of renewal was flagged as a risk. The Snowflake integration is on track for an October 15th beta, with early access being explored for Acme. The team also touched on the dashboard redesign research findings and the upcoming Q4 marketing campaign launch.",
+    "bullet_points": [
+      "\ud83d\udcca Churn dropped to 2.1% in August, down from 2.6% the prior month",
+      "\ud83d\udcb0 Net new MRR came in at $14,200, under the $18K target",
+      "\ud83d\udd27 Snowflake integration ~70% complete, beta targeted for October 15",
+      "\u26a0\ufe0f Acme usage down 18% month over month ahead of renewal in six weeks",
+      "\ud83c\udfa8 Dashboard redesign research points to demand for drag-and-drop widget layouts",
+      "\u2705 Globex onboarding kicked off smoothly, 210 seats, biggest of the quarter",
+      "\ud83d\udce3 Q4 campaign 'Data Driven Or Die' launches October 1 with $45K budget",
+      "\ud83e\uddd1\u200d\ud83d\udcbb Frontend engineer candidate Priya Nair interviewing Thursday"
+    ],
+    "keywords": [
+      "churn",
+      "MRR",
+      "Snowflake integration",
+      "Sprint 42",
+      "dashboard redesign",
+      "Acme renewal",
+      "Globex onboarding",
+      "Q4 campaign",
+      "weekly active users"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Metrics Review",
+      "start": 0.0,
+      "end": 170.8,
+      "summary": "Maya walks through August churn, MRR growth, and weekly active user numbers, flagging two small churned accounts."
+    },
+    {
+      "title": "Engineering Update",
+      "start": 171.8,
+      "end": 324.8,
+      "summary": "Derek covers Snowflake integration progress, Sprint 42 planning, and the pagination bug fix for Globex."
+    },
+    {
+      "title": "Design Update",
+      "start": 325.8,
+      "end": 404.2,
+      "summary": "Tom shares findings from customer interviews on the dashboard redesign and plans a critique session."
+    },
+    {
+      "title": "Customer Success Update",
+      "start": 405.2,
+      "end": 498.2,
+      "summary": "Aisha flags usage decline and renewal risk at Acme, and reports a strong Globex onboarding start."
+    },
+    {
+      "title": "Marketing Update",
+      "start": 499.2,
+      "end": 588.2,
+      "summary": "Jordan previews the Q4 campaign launch, creative testing results, and landing page review needs."
+    },
+    {
+      "title": "Wrap-up and Action Items",
+      "start": 589.2,
+      "end": 723.8,
+      "summary": "The team confirms the frontend hiring pipeline and closes with a recap of owners and deadlines."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Send Maya the Snowflake integration staging demo link",
+      "assignee": "Derek Osei",
+      "due_in_days": 0,
+      "completed": true,
+      "timestamp": 246.2
+    },
+    {
+      "text": "Get Acme early access to Snowflake integration by October 10th, five days ahead of beta",
+      "assignee": "Maya Chen",
+      "due_in_days": 14,
+      "completed": false,
+      "timestamp": 228.8
+    },
+    {
+      "text": "Review new alert configuration modal mocks before Monday's sprint planning",
+      "assignee": "Tom Bennett",
+      "due_in_days": 3,
+      "completed": true,
+      "timestamp": 314.0
+    },
+    {
+      "text": "Review Q4 campaign landing page copy for accuracy on Snowflake claims",
+      "assignee": "Derek Osei",
+      "due_in_days": 3,
+      "completed": false,
+      "timestamp": 574.4
+    },
+    {
+      "text": "Send Aisha an invite to the dashboard redesign critique session",
+      "assignee": "Tom Bennett",
+      "due_in_days": 1,
+      "completed": true,
+      "timestamp": 389.6
+    },
+    {
+      "text": "Send Aisha the updated Growth tier pricing one-pager",
+      "assignee": "Maya Chen",
+      "due_in_days": 3,
+      "completed": false,
+      "timestamp": 640.0
+    },
+    {
+      "text": "Finalize webinar speaker list decision",
+      "assignee": "Maya Chen",
+      "due_in_days": 2,
+      "completed": false,
+      "timestamp": 667.4
+    }
+  ]
+}

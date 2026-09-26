@@ -1,0 +1,553 @@
+{
+  "title": "Q4 Campaign Review",
+  "days_ago": 4,
+  "start_time": "13:30",
+  "platform": "teams",
+  "participants": [
+    {
+      "name": "Jordan Blake",
+      "email": "jordan.blake@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Nina Patel",
+      "email": "nina.patel@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Maya Chen",
+      "email": "maya.chen@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Sam Whitfield",
+      "email": "sam.whitfield@northwindlabs.io",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Marketing"
+  ],
+  "transcript": [
+    {
+      "speaker": "Jordan Blake",
+      "start": 0.0,
+      "end": 12.8,
+      "text": "Okay, thanks everyone for joining, this is our final readiness review before Data Driven Or Die launches October first, so I want to make sure we're all aligned before we hit go."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 14.6,
+      "end": 21.4,
+      "text": "Sounds good, I've got the full plan pulled up, happy to walk through it section by section."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 23.2,
+      "end": 33.2,
+      "text": "Works for me, and I want to make sure we land on the landing page copy review before we leave, that's been on my list."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 35.0,
+      "end": 46.2,
+      "text": "Same, mostly here to make sure sales is set up to actually work the leads this thing generates, last campaign we dropped the ball on follow up timing."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 48.0,
+      "end": 54.4,
+      "text": "Fair, we'll get to that. Nina, can you start with where budget and channel allocation landed?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 56.2,
+      "end": 71.8,
+      "text": "Sure. Total budget is forty five thousand, we've got twenty thousand going to paid social, mostly LinkedIn given our buyer profile, fifteen thousand across four industry newsletters, and ten thousand for the three part webinar series including production costs."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 73.6,
+      "end": 77.2,
+      "text": "How'd we land on that split versus last quarter?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 79.0,
+      "end": 93.4,
+      "text": "We shifted about five thousand out of newsletters and into paid social, the newsletter performance last campaign underdelivered on cost per lead, it came in around ninety dollars a lead versus forty two for paid social."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 95.2,
+      "end": 107.2,
+      "text": "Right, and that ninety dollar number is why we trimmed two of the six newsletters we were considering this time and kept only the four that actually converted last time."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 109.0,
+      "end": 115.8,
+      "text": "Makes sense, more efficient spend is good for me either way, as long as lead quality holds."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 117.6,
+      "end": 130.4,
+      "text": "On quality, we've tightened our MQL criteria too, this campaign specifically targets director level and above at companies with two hundred plus employees, since that's where our sales cycle actually closes fastest."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 132.2,
+      "end": 144.6,
+      "text": "Good, that filtering matters a lot, last time we got a bunch of leads from smaller companies that never had budget authority and it wasted a ton of my team's time."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 146.4,
+      "end": 153.2,
+      "text": "Agreed, that's a direct fix based on your feedback from last quarter, appreciate you flagging it then."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 155.0,
+      "end": 158.0,
+      "text": "Of course, that's what the debrief's for."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 159.8,
+      "end": 163.4,
+      "text": "Let's talk creative. Nina, walk through the testing results."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 165.2,
+      "end": 180.4,
+      "text": "We ran an A/B test on the primary ad creative, one version led with feature messaging, dashboards, integrations, that kind of thing, the other led with a customer testimonial from Northstar Logistics talking about time saved on reporting."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 182.2,
+      "end": 187.4,
+      "text": "And the testimonial version won, right? I remember hearing that at product sync."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 189.2,
+      "end": 202.4,
+      "text": "Yeah, by a wide margin actually, almost double the click through rate, two point one percent versus one point one for the feature-led version. We're going with testimonial-led creative across all paid social."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 204.2,
+      "end": 218.6,
+      "text": "We also got a second testimonial in from a company called Fenwick Manufacturing that we're going to rotate in as a second variant once the campaign's been live a couple weeks, just to avoid creative fatigue."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 220.4,
+      "end": 225.6,
+      "text": "Smart, one testimonial gets stale fast if it's the only thing anyone sees."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 227.4,
+      "end": 230.4,
+      "text": "Exactly the thinking there."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 232.2,
+      "end": 235.8,
+      "text": "Okay, landing page, Maya you wanted to cover this."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 237.6,
+      "end": 248.8,
+      "text": "Yeah, so Derek reviewed the copy over the weekend, mainly flagging that we shouldn't headline with Snowflake integration since it's still in limited beta, not generally available yet."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 250.6,
+      "end": 263.8,
+      "text": "Good catch, we actually had that as the second bullet point on the page, I'll pull that down to a smaller mention lower on the page instead, maybe under a 'coming soon' framing."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 265.6,
+      "end": 274.4,
+      "text": "That works, we don't want to promise something that's not fully shipped and then have sales fielding angry emails in three weeks."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 276.2,
+      "end": 281.8,
+      "text": "Appreciate that, nothing worse than closing someone on a feature that isn't actually ready."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 283.6,
+      "end": 301.2,
+      "text": "Otherwise the page looked good, the testimonial section up top is strong, and the CTA is clear. One small thing, can we add a case study link instead of just the pull quote, give people something to click into if they want more depth?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 303.0,
+      "end": 320.6,
+      "text": "Yeah, we actually have a full Northstar case study in the works, it's not quite done but I can get a draft version linked by launch, worst case I link the existing one-pager for now and swap it once the full case study's ready."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 322.4,
+      "end": 325.6,
+      "text": "That works, as long as there's something there."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 327.4,
+      "end": 335.4,
+      "text": "Okay, let's talk webinars since that's a chunk of the budget. Nina, can you run through the topics and speakers?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 337.2,
+      "end": 352.8,
+      "text": "Three sessions, one every two weeks starting mid-October. First one is cohort analysis fundamentals, second is real time alerting and operational dashboards, and the third is a customer panel with Northstar and hopefully Fenwick if they agree to it."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 354.6,
+      "end": 360.2,
+      "text": "Who's presenting the second one, the alerting session? That feature isn't fully shipped either."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 362.0,
+      "end": 378.4,
+      "text": "Good catch, that's actually why I wanted you in this meeting. I think we frame that session around the concept and early results rather than a full product demo, since alerting delivery won't be live until Sprint 43 at the earliest."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 380.2,
+      "end": 387.8,
+      "text": "That's safer, let's make sure whoever presents that one is clear it's a preview, not a general availability announcement."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 389.6,
+      "end": 396.4,
+      "text": "Noted, I'll build that framing into the talk track and run it by Derek before the session."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 398.2,
+      "end": 409.8,
+      "text": "Speaker wise, I've got a draft list, mostly internal, Derek or someone from his team for the technical sessions, and I still need final sign off on that list."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 411.6,
+      "end": 419.2,
+      "text": "Right, I said I'd review that this weekend and get you a decision Friday morning, I'll stick to that."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 421.0,
+      "end": 427.4,
+      "text": "Appreciate it, I want invites going out early next week so we're not scrambling for RSVPs."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 429.2,
+      "end": 437.2,
+      "text": "Quick question on the webinars, will sales get the registrant list in real time, or only after each session wraps?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 439.0,
+      "end": 451.8,
+      "text": "Real time, we're syncing registrations directly into the CRM as they come in, so your team can see who signs up as soon as they register, not just attendees after the fact."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 453.6,
+      "end": 463.6,
+      "text": "Perfect, that's actually a big improvement, last time we only got the list after the webinar and by then some of the urgency was gone."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 465.4,
+      "end": 470.6,
+      "text": "Good, that was a direct fix based on feedback from you guys too."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 472.4,
+      "end": 485.2,
+      "text": "Appreciated. Let's talk about follow up SLA then, since that was my other concern from last time. What's the plan for how fast reps respond to a new lead from this campaign?"
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 487.0,
+      "end": 499.0,
+      "text": "I want to propose a twenty four hour SLA for MQLs generated from paid social and the landing page, given how quickly interest can cool on outbound touches like these."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 500.8,
+      "end": 513.2,
+      "text": "Twenty four hours is doable, I'll make sure that's communicated to the team and we'll track it in our dashboard so it's visible, not just an informal goal nobody actually watches."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 515.0,
+      "end": 526.2,
+      "text": "That would be great, can we also agree on lead routing, is it strictly by territory or do bigger accounts get routed to specific reps regardless of territory?"
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 528.0,
+      "end": 537.2,
+      "text": "Strictly territory for now to keep it simple, if something looks like a strategic account we can always reassign manually after the fact."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 539.0,
+      "end": 548.6,
+      "text": "Works for me. Nina, are UTM parameters set up so we can actually attribute pipeline back to specific channels and even specific ad creative?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 550.4,
+      "end": 564.4,
+      "text": "Yes, every asset has a unique UTM, broken down by channel, campaign, and creative variant, so we'll be able to see exactly which newsletter or which ad version is actually driving pipeline, not just leads."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 566.2,
+      "end": 571.4,
+      "text": "Good, that granularity matters a lot for how we allocate budget next quarter."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 573.2,
+      "end": 581.6,
+      "text": "Agreed, I'd love a mid-campaign readout in like three weeks so we can course correct spend if one channel's clearly underperforming."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 583.4,
+      "end": 589.4,
+      "text": "Let's do that, I'll schedule a mid-campaign check in for the third week of October."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 591.2,
+      "end": 600.8,
+      "text": "I'll have the dashboard ready with live numbers by then, pulling from the CRM and ad platforms directly so we're not manually reconciling spreadsheets."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 602.6,
+      "end": 608.6,
+      "text": "Perfect. Let's also quickly touch launch day logistics, anything blocking a clean October first launch?"
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 610.4,
+      "end": 620.0,
+      "text": "Only thing outstanding is the landing page edit we just discussed, everything else, ad creative, newsletter placements, webinar registration pages, is built and scheduled."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 621.8,
+      "end": 627.4,
+      "text": "Great, I'll get that landing page edit prioritized today so there's buffer before launch."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 629.2,
+      "end": 640.0,
+      "text": "On my side, I'll get the SLA and routing rules documented and shared with the team by Monday so reps aren't caught off guard on day one."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 641.8,
+      "end": 646.6,
+      "text": "And I'll finalize the webinar speaker list by Friday like I said."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 648.4,
+      "end": 659.6,
+      "text": "Great, let's recap. Nina handles the landing page edit today, drops Snowflake down to a coming soon mention, and gets the case study link or interim one-pager added."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 661.4,
+      "end": 664.4,
+      "text": "On it."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 666.2,
+      "end": 673.4,
+      "text": "Maya finalizes the speaker list by Friday and I'll get invites out early next week once that's locked."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 675.2,
+      "end": 678.2,
+      "text": "Confirmed."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 680.0,
+      "end": 689.2,
+      "text": "Sam documents the follow up SLA and routing rules by Monday, and I'm scheduling the mid-campaign readout for the third week of October."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 691.0,
+      "end": 694.0,
+      "text": "Sounds good, I'm on it."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 695.8,
+      "end": 702.6,
+      "text": "Great, I think we're in good shape for October first. Thanks everyone, this was a productive one."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 704.4,
+      "end": 707.4,
+      "text": "Agreed, feeling good about this launch."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 709.2,
+      "end": 713.2,
+      "text": "Same, appreciate the tighter lead quality targeting this time around."
+    },
+    {
+      "speaker": "Nina Patel",
+      "start": 715.0,
+      "end": 720.2,
+      "text": "Thanks all, I'll get moving on the landing page fix right after this."
+    },
+    {
+      "speaker": "Jordan Blake",
+      "start": 722.0,
+      "end": 725.0,
+      "text": "Great, talk soon everyone."
+    }
+  ],
+  "summary": {
+    "overview": "Jordan led a final readiness review for the Q4 'Data Driven Or Die' campaign ahead of its October 1st launch, with Nina covering budget allocation, creative testing, and webinar planning, Maya relaying landing page feedback, and Sam representing sales' interest in lead quality and follow-up speed. The team confirmed the testimonial-led creative won A/B testing decisively and refined MQL targeting to director-level buyers at 200+ employee companies based on last quarter's lessons. Sales and marketing aligned on a 24-hour follow-up SLA, territory-based lead routing, and real-time UTM attribution. The only remaining blocker before launch is a landing page edit to soften Snowflake integration claims.",
+    "bullet_points": [
+      "\ud83d\udcb0 $45K Q4 budget: $20K paid social, $15K newsletters, $10K webinar series",
+      "\ud83c\udfaf MQL criteria tightened to director+ at 200+ employee companies",
+      "\ud83d\udcca Testimonial-led creative nearly doubled CTR (2.1% vs 1.1%) over feature-led messaging",
+      "\ud83d\udda5\ufe0f Landing page fix needed: soften Snowflake claims to 'coming soon', add case study link",
+      "\ud83c\udf99\ufe0f Three-part webinar series starting mid-October; alerting session framed as preview, not GA",
+      "\u23f1\ufe0f 24-hour lead follow-up SLA agreed with sales, territory-based routing",
+      "\ud83d\udd17 UTM tracking set up per channel/creative for pipeline attribution",
+      "\ud83d\udcc5 Mid-campaign readout scheduled for third week of October"
+    ],
+    "keywords": [
+      "Data Driven Or Die",
+      "campaign budget",
+      "MQL targeting",
+      "A/B testing",
+      "landing page",
+      "webinar series",
+      "lead SLA",
+      "UTM attribution",
+      "Q4 launch"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Budget and Channel Allocation",
+      "start": 0.0,
+      "end": 158.0,
+      "summary": "Nina walks through the $45K budget split across paid social, newsletters, and webinars, and the MQL targeting criteria refined from last quarter's feedback."
+    },
+    {
+      "title": "Creative Testing Results",
+      "start": 159.8,
+      "end": 230.4,
+      "summary": "Nina shares A/B test results showing the customer testimonial creative nearly doubled click-through rate over feature-led messaging."
+    },
+    {
+      "title": "Landing Page Review",
+      "start": 232.2,
+      "end": 325.6,
+      "summary": "Maya relays feedback on toning down Snowflake claims and adding a case study link to the landing page."
+    },
+    {
+      "title": "Webinar Series Planning",
+      "start": 327.4,
+      "end": 470.6,
+      "summary": "The team reviews the three-part webinar series topics, speaker sign-off, and framing for the not-yet-shipped alerting feature."
+    },
+    {
+      "title": "Sales Alignment: SLA and Attribution",
+      "start": 472.4,
+      "end": 600.8,
+      "summary": "Sam and Jordan align on a 24-hour lead follow-up SLA, territory-based routing, and UTM-based attribution tracking."
+    },
+    {
+      "title": "Launch Readiness and Close",
+      "start": 602.6,
+      "end": 725.0,
+      "summary": "The team confirms remaining launch-day tasks and schedules a mid-campaign readout."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Edit landing page to move Snowflake integration to a 'coming soon' mention and add case study link",
+      "assignee": "Nina Patel",
+      "due_in_days": 0,
+      "completed": false,
+      "timestamp": 250.6
+    },
+    {
+      "text": "Finalize webinar speaker list by Friday",
+      "assignee": "Maya Chen",
+      "due_in_days": 1,
+      "completed": false,
+      "timestamp": 411.6
+    },
+    {
+      "text": "Review alerting webinar talk track framing with Derek before the session",
+      "assignee": "Nina Patel",
+      "due_in_days": 7,
+      "completed": false,
+      "timestamp": 389.6
+    },
+    {
+      "text": "Document 24-hour lead follow-up SLA and territory routing rules, share with sales team by Monday",
+      "assignee": "Sam Whitfield",
+      "due_in_days": 4,
+      "completed": false,
+      "timestamp": 629.2
+    },
+    {
+      "text": "Schedule mid-campaign readout for third week of October",
+      "assignee": "Jordan Blake",
+      "due_in_days": 3,
+      "completed": true,
+      "timestamp": 583.4
+    },
+    {
+      "text": "Build live attribution dashboard pulling from CRM and ad platforms",
+      "assignee": "Nina Patel",
+      "due_in_days": 18,
+      "completed": false,
+      "timestamp": 591.2
+    }
+  ]
+}

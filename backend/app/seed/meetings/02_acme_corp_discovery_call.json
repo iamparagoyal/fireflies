@@ -1,0 +1,554 @@
+{
+  "title": "Acme Corp Discovery Call",
+  "days_ago": 15,
+  "start_time": "14:00",
+  "platform": "zoom",
+  "participants": [
+    {
+      "name": "Sam Whitfield",
+      "email": "sam.whitfield@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Lena Ortiz",
+      "email": "lena.ortiz@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Grace Liu",
+      "email": "grace.liu@acme.com",
+      "is_host": false
+    },
+    {
+      "name": "Marcus Webb",
+      "email": "marcus.webb@acme.com",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Sales",
+    "Customer"
+  ],
+  "transcript": [
+    {
+      "speaker": "Sam Whitfield",
+      "start": 0.0,
+      "end": 8.4,
+      "text": "Grace, Marcus, thanks so much for making time today, I know Thursday afternoons are tough to carve out. How's everyone doing?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 9.9,
+      "end": 17.9,
+      "text": "Doing well, thanks, just back from a plant visit in Ohio so glad to be sitting down for a bit."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 19.4,
+      "end": 25.8,
+      "text": "Same here, good to finally connect, we've been meaning to look into this for a while."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 27.3,
+      "end": 38.1,
+      "text": "Glad we could line it up. I've got Lena here with me, she's one of our solutions engineers and she'll help answer anything technical that comes up."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 39.6,
+      "end": 46.8,
+      "text": "Hey both, nice to meet you, looking forward to hearing more about what you're dealing with over there."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 48.3,
+      "end": 51.3,
+      "text": "Likewise."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 52.8,
+      "end": 64.0,
+      "text": "So before I show anything, I'd love to just understand your world a bit better. Marcus, can you walk me through how Acme handles analytics and reporting today?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 65.5,
+      "end": 78.7,
+      "text": "Sure. Honestly it's a mess. We've got data spread across our ERP, a warehouse management system, and then a Tableau instance that maybe six people in the company actually know how to use."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 80.2,
+      "end": 91.0,
+      "text": "And most of operations, the plant managers, the regional ops leads, they're stuck waiting on Marcus's team to pull reports for them, which creates this huge bottleneck."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 92.5,
+      "end": 95.5,
+      "text": "How often are they asking for reports?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 97.0,
+      "end": 106.6,
+      "text": "Constantly, probably twenty to thirty ad hoc requests a week across my team of three analysts. We're basically a human API at this point."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 108.1,
+      "end": 118.5,
+      "text": "That's a really common pain point we hear, especially in manufacturing and logistics where the frontline managers need numbers fast but aren't going to write SQL."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 120.0,
+      "end": 134.0,
+      "text": "Exactly, that's our world. We have twelve distribution centers and each regional lead wants to see their own throughput, on-time delivery, and inventory turns basically in real time, not three days later in a PDF."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 135.5,
+      "end": 143.5,
+      "text": "Got it. And when you say real time, what's actually acceptable, is it truly live, or more like refreshed daily?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 145.0,
+      "end": 160.2,
+      "text": "Honestly daily would already be a massive improvement over what we have now, which is more like weekly for some of these reports. If we could get to hourly for the critical operational metrics that would be fantastic."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 161.7,
+      "end": 175.7,
+      "text": "That's very doable on our end, our standard sync cadence is every fifteen minutes for most source systems, and we can do near real time with event streaming for a few use cases if needed."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 177.2,
+      "end": 180.4,
+      "text": "That already sounds better than what we've got."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 181.9,
+      "end": 192.7,
+      "text": "Let's talk a bit about who else is involved in a decision like this. Grace, is it just you and Marcus, or is there a broader group?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 194.2,
+      "end": 209.4,
+      "text": "It's really the two of us driving it day to day, but our CFO, Renata, has to sign off on anything over fifty thousand a year, and IT security will need to review before anything touches our data."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 210.9,
+      "end": 218.1,
+      "text": "Yeah, IT security review is usually the longest part of any vendor process here, just a heads up."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 219.6,
+      "end": 232.0,
+      "text": "That's helpful to know early. We're SOC 2 Type Two certified and can share the report under NDA whenever you need it, that usually speeds up the security review a lot."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 233.5,
+      "end": 238.3,
+      "text": "Perfect, that'll help, our security team always asks for that first thing."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 239.8,
+      "end": 247.8,
+      "text": "I'll get that report sent over to you both today so you have it in hand before it's even requested."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 249.3,
+      "end": 252.3,
+      "text": "Appreciated."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 253.8,
+      "end": 264.6,
+      "text": "On budget, you mentioned fifty thousand as a threshold for CFO approval, is that roughly the ballpark you're expecting to spend annually, or could it go higher?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 266.1,
+      "end": 276.5,
+      "text": "We had budgeted somewhere between fifty and eighty thousand for the year depending on scope, we're comparing a couple vendors so it really depends what's included."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 278.0,
+      "end": 296.8,
+      "text": "That's helpful context. Just so you know where we typically land, for a company your size with twelve locations, most customers end up in our Growth tier, which is around sixty two thousand a year for up to fifty seats, and that includes the integrations you'd need."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 298.3,
+      "end": 301.5,
+      "text": "How many source systems can that connect to?"
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 303.0,
+      "end": 315.8,
+      "text": "Unlimited connections on Growth actually, it's seat based pricing not connector based, so you could plug in your ERP, your WMS, and Salesforce if you use it, all under the same plan."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 317.3,
+      "end": 324.9,
+      "text": "That's actually simpler than I expected, our other vendor we're evaluating charges per connector which was getting complicated fast."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 326.4,
+      "end": 340.0,
+      "text": "Yeah we hear that a lot, we deliberately moved away from that model a couple years back because it punishes exactly the kind of company you are, lots of systems, not a huge team."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 341.5,
+      "end": 347.5,
+      "text": "Who else are we up against, are you allowed to say, or is that awkward?"
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 349.0,
+      "end": 364.6,
+      "text": "Ha, I won't ask who specifically, but broadly we compete against the bigger BI incumbents and a couple of newer point solutions. Where we tend to win is ease of setup for non-technical users and speed to first dashboard."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 366.1,
+      "end": 378.1,
+      "text": "That matters a lot to us honestly, our last BI rollout basically failed because it took six months to get anyone using it and by then everyone had lost interest."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 379.6,
+      "end": 394.0,
+      "text": "That's such a common story. Our median time from kickoff to first live dashboard is under two weeks for a company your size, and we do hands-on onboarding, it's not just documentation and a support ticket."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 395.5,
+      "end": 399.1,
+      "text": "Two weeks, that includes connecting our ERP and WMS?"
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 400.6,
+      "end": 417.4,
+      "text": "Yep, assuming we get access and credentials promptly, two weeks is realistic for the core connections and your first set of dashboards. Full rollout to all twelve DCs with custom views per region usually takes another two to four weeks after that."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 418.9,
+      "end": 422.9,
+      "text": "Okay, that's a lot faster than I was expecting honestly."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 424.4,
+      "end": 434.0,
+      "text": "Let's talk timeline on your end, when are you hoping to have a decision made, and when would you want to actually be live?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 435.5,
+      "end": 450.3,
+      "text": "We'd like to make a vendor decision by the end of Q4, so call it mid-December, and ideally be live with at least the core dashboards by end of January before our fiscal year planning cycle starts."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 451.8,
+      "end": 461.4,
+      "text": "That planning cycle is a big driver honestly, leadership wants better visibility into throughput and on time delivery before they set next year's targets."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 462.9,
+      "end": 476.1,
+      "text": "Got it, that gives us a clear target. If we can get security review moving early and get a technical deep dive scheduled soon, January go live is very achievable on our side."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 477.6,
+      "end": 488.4,
+      "text": "I'd suggest we set up a technical session next week where I walk through the actual connectors for your ERP, what's it running on by the way?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 489.9,
+      "end": 496.3,
+      "text": "It's an older SAP instance, plus a custom built WMS that our own engineering team maintains."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 497.8,
+      "end": 511.8,
+      "text": "Okay, SAP is one of our most mature connectors, no concerns there. The custom WMS we'd want to look at together, probably a database level connection or an API if you expose one, either works."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 513.3,
+      "end": 519.7,
+      "text": "We do have a REST API on the WMS actually, I can get you the docs."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 521.2,
+      "end": 531.2,
+      "text": "Perfect, if you can send that over before our technical session that'll let me come prepared with a real integration plan instead of just theory."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 532.7,
+      "end": 535.7,
+      "text": "I'll send the API docs by tomorrow."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 537.2,
+      "end": 548.4,
+      "text": "Great. Grace, would it help to see a couple of reference customers in a similar space, maybe another logistics or manufacturing company using Beacon at a similar scale?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 549.9,
+      "end": 558.7,
+      "text": "Yes actually, that would carry a lot of weight with our leadership team, real proof it works for a company like us."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 560.2,
+      "end": 571.8,
+      "text": "I'll set that up, we have a great reference at Northstar Logistics who's a similar size, I'll ask if they're open to a quick call and get that scheduled."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 573.3,
+      "end": 576.3,
+      "text": "That would be great, thank you."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 577.8,
+      "end": 589.4,
+      "text": "Of course. One more thing while I have you, is there a specific use case or dashboard that if we nailed it, would make this an easy yes internally?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 590.9,
+      "end": 602.5,
+      "text": "Honestly, on time delivery by region, broken down by carrier. If leadership could see that daily without me pulling a report, that alone would probably justify the whole thing."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 604.0,
+      "end": 615.2,
+      "text": "That's a great one to lead with, we can absolutely build that as one of the first dashboards in the technical session so you're seeing exactly that view."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 616.7,
+      "end": 625.1,
+      "text": "That would be perfect, honestly if you show up to the technical session with that already mocked up we'll be sold."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 626.6,
+      "end": 641.4,
+      "text": "Noted, we'll make sure that's front and center. Let's recap where we land. I'll send over the SOC 2 report and a formal proposal reflecting the Growth tier pricing we discussed, both by end of this week."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 642.9,
+      "end": 645.9,
+      "text": "Sounds good."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 647.4,
+      "end": 658.6,
+      "text": "Lena will set up the technical deep dive for next week, Marcus will send the WMS API docs beforehand, and I'll get the Northstar Logistics reference call scheduled."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 660.1,
+      "end": 663.3,
+      "text": "Perfect, I'll get those docs over tomorrow morning."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 664.8,
+      "end": 674.4,
+      "text": "And Grace, once you have the proposal, do you want me to also loop in Renata directly, or would you rather present internally first?"
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 675.9,
+      "end": 684.7,
+      "text": "Let me take a first pass internally, then if there are questions on the finance side I'll bring you and Renata together."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 686.2,
+      "end": 693.4,
+      "text": "That works, just let me know when. Anything else either of you want to cover before we wrap?"
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 694.9,
+      "end": 700.9,
+      "text": "No, I think this was really helpful, appreciate you walking through the pricing so directly."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 702.4,
+      "end": 708.4,
+      "text": "Agreed, this was a good use of thirty minutes, looking forward to the technical session."
+    },
+    {
+      "speaker": "Sam Whitfield",
+      "start": 709.9,
+      "end": 719.1,
+      "text": "Great, thank you both, I'll get that SOC 2 report and proposal over today, and Lena will follow up on scheduling. Talk soon."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 720.6,
+      "end": 725.4,
+      "text": "Thanks everyone, looking forward to digging into the WMS integration next week."
+    },
+    {
+      "speaker": "Grace Liu",
+      "start": 726.9,
+      "end": 729.9,
+      "text": "Thanks Sam, thanks Lena, bye."
+    },
+    {
+      "speaker": "Marcus Webb",
+      "start": 731.4,
+      "end": 734.4,
+      "text": "Thanks all, bye."
+    }
+  ],
+  "summary": {
+    "overview": "Sam and Lena ran a discovery call with Grace Liu and Marcus Webb from Acme Corp, a logistics and manufacturing company evaluating Beacon to replace fragmented, analyst-bottlenecked reporting across SAP, a custom WMS, and Tableau. Acme's operations leaders need near-real-time visibility into throughput, on-time delivery, and inventory turns across twelve distribution centers, and currently wait on a three-person analyst team for ad hoc reports. Budget is expected in the $50K-$80K range with CFO approval required above $50K, and Acme wants a vendor decision by mid-December with a January go-live ahead of fiscal year planning. The call ended with clear next steps: a SOC 2 report, a formal proposal, a technical deep dive on the SAP and WMS integrations, and a customer reference call.",
+    "bullet_points": [
+      "\ud83c\udfed Acme runs 12 distribution centers, reporting split across SAP, a custom WMS, and Tableau",
+      "\ud83d\udcc9 Analyst team fielding 20-30 ad hoc report requests per week, described as a 'human API'",
+      "\ud83d\udcb0 Budget range $50K-$80K/year, CFO sign-off required above $50K",
+      "\ud83d\udd12 SOC 2 Type II report requested to speed up Acme's IT security review",
+      "\ud83d\udcb5 Growth tier (~$62K/year, up to 50 seats, unlimited connectors) proposed as fit",
+      "\u23f1\ufe0f Target: vendor decision by mid-December, go-live by end of January",
+      "\ud83d\udd0c Integration scope: mature SAP connector plus custom WMS via REST API",
+      "\ud83c\udfaf On-time-delivery-by-carrier dashboard flagged as the 'easy yes' use case"
+    ],
+    "keywords": [
+      "Acme Corp",
+      "discovery call",
+      "SAP integration",
+      "WMS API",
+      "SOC 2",
+      "Growth tier pricing",
+      "distribution centers",
+      "on-time delivery",
+      "Beacon"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Introductions",
+      "start": 0.0,
+      "end": 51.3,
+      "summary": "Sam and Lena open the call and set the agenda for understanding Acme's current analytics environment."
+    },
+    {
+      "title": "Current State and Pain Points",
+      "start": 52.8,
+      "end": 180.4,
+      "summary": "Marcus and Grace describe Acme's fragmented reporting across ERP, WMS, and Tableau, and the bottleneck on the analyst team."
+    },
+    {
+      "title": "Stakeholders, Budget, and Security",
+      "start": 181.9,
+      "end": 252.3,
+      "summary": "The group covers decision makers, CFO approval threshold, security review, and SOC 2 requirements."
+    },
+    {
+      "title": "Pricing and Competitive Landscape",
+      "start": 253.8,
+      "end": 422.9,
+      "summary": "Sam presents Growth tier pricing and unlimited connectors, and discusses how Beacon differentiates from competitors."
+    },
+    {
+      "title": "Timeline and Technical Scoping",
+      "start": 424.4,
+      "end": 535.7,
+      "summary": "Grace and Marcus share their Q4 decision and January go-live target, and the group scopes the SAP and WMS integration."
+    },
+    {
+      "title": "Reference Call, Key Use Case, and Next Steps",
+      "start": 537.2,
+      "end": 734.4,
+      "summary": "The team lines up a customer reference call, identifies the highest-impact dashboard, and confirms next steps and owners."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Send Grace and Marcus the SOC 2 Type II report",
+      "assignee": "Sam Whitfield",
+      "due_in_days": 0,
+      "completed": true,
+      "timestamp": 239.8
+    },
+    {
+      "text": "Send formal proposal reflecting Growth tier pricing",
+      "assignee": "Sam Whitfield",
+      "due_in_days": 3,
+      "completed": false,
+      "timestamp": 626.6
+    },
+    {
+      "text": "Schedule technical deep dive session for next week",
+      "assignee": "Lena Ortiz",
+      "due_in_days": 5,
+      "completed": false,
+      "timestamp": 477.6
+    },
+    {
+      "text": "Send WMS REST API documentation ahead of technical session",
+      "assignee": "Marcus Webb",
+      "due_in_days": 1,
+      "completed": true,
+      "timestamp": 532.7
+    },
+    {
+      "text": "Set up reference call with Northstar Logistics",
+      "assignee": "Sam Whitfield",
+      "due_in_days": 4,
+      "completed": false,
+      "timestamp": 560.2
+    },
+    {
+      "text": "Build on-time-delivery-by-region-and-carrier dashboard mockup for technical session",
+      "assignee": "Lena Ortiz",
+      "due_in_days": 5,
+      "completed": false,
+      "timestamp": 604.0
+    }
+  ]
+}

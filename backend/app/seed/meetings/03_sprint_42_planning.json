@@ -1,0 +1,567 @@
+{
+  "title": "Sprint 42 Planning",
+  "days_ago": 18,
+  "start_time": "09:00",
+  "platform": "google_meet",
+  "participants": [
+    {
+      "name": "Derek Osei",
+      "email": "derek.osei@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Sofia Marin",
+      "email": "sofia.marin@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Ravi Shah",
+      "email": "ravi.shah@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Maya Chen",
+      "email": "maya.chen@northwindlabs.io",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Engineering",
+    "Planning"
+  ],
+  "transcript": [
+    {
+      "speaker": "Derek Osei",
+      "start": 0.0,
+      "end": 12.4,
+      "text": "Alright, let's kick off Sprint 42 planning. Before we get into it, quick look back, Sprint 41 we committed thirty four points and closed thirty one, so pretty solid, one carryover."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 14.2,
+      "end": 23.8,
+      "text": "Yeah the carryover was the empty state redesign, I ran out of time after the alert modal ate more of my week than expected."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 25.6,
+      "end": 36.4,
+      "text": "Makes sense, that happens. Maya's going to join us for the first part to talk priorities, then drop off, and Ravi and I will finish sizing after."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 38.2,
+      "end": 51.8,
+      "text": "Thanks for having me, I'll keep it quick. Top priority for this sprint from my side is the real time alerting epic, Acme and a couple other accounts have been asking for it directly."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 53.6,
+      "end": 61.6,
+      "text": "That's the one where users get notified when a metric crosses a threshold, right, like churn spikes above some percent?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 63.4,
+      "end": 75.0,
+      "text": "Exactly, configurable thresholds per metric, and delivery through email or Slack. It's been on the roadmap for two sprints now, I'd really like to see meaningful progress this sprint."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 76.8,
+      "end": 90.0,
+      "text": "We scoped the epic into three chunks last week, threshold configuration UI, the alert evaluation engine on the backend, and the notification delivery layer. Realistically we can't finish all three in one sprint."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 91.8,
+      "end": 94.8,
+      "text": "What's achievable this sprint then?"
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 96.6,
+      "end": 110.2,
+      "text": "I think config UI and the evaluation engine are doable, that gets us to a place where alerts actually fire internally even if delivery isn't wired up yet. Delivery would roll to Sprint 43."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 112.0,
+      "end": 118.8,
+      "text": "That works for me, as long as we're not slipping further, some customers are asking pretty pointedly."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 120.6,
+      "end": 133.0,
+      "text": "The evaluation engine is more work than people think though, we need to run threshold checks against streaming metric data without hammering the database every time a new event comes in."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 134.8,
+      "end": 142.8,
+      "text": "Yeah, that's why I want to size it carefully instead of just guessing. We'll get into that in a second."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 144.6,
+      "end": 157.4,
+      "text": "Second thing, smaller ask, the SQL query builder pagination bug that Globex hit during onboarding, that needs to land this sprint, it's a bad first impression for a two hundred seat account."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 159.2,
+      "end": 172.8,
+      "text": "I already branched that one actually, found the root cause yesterday, the offset calculation breaks once result sets pass ten thousand rows because we're doing client side offset math instead of using a cursor."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 174.6,
+      "end": 177.6,
+      "text": "How big a fix is that really?"
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 179.4,
+      "end": 189.0,
+      "text": "Small, I think two points, I just need to swap to cursor based pagination on that one endpoint. I can probably ship it Wednesday."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 190.8,
+      "end": 203.6,
+      "text": "Perfect, that's exactly what I wanted to hear. Okay, that's my two priorities, real time alerting progress and the pagination fix, I'll let you two get into sizing. Thanks for the time."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 205.4,
+      "end": 208.4,
+      "text": "Thanks Maya, talk soon."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 210.2,
+      "end": 213.2,
+      "text": "Bye Maya."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 215.0,
+      "end": 227.4,
+      "text": "Okay, so let's build out the sprint board. First, Ravi, the pagination bug, you said two points and it's already branched, let's lock that in and make it the first ticket."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 229.2,
+      "end": 234.4,
+      "text": "Works for me, I'll finish it Wednesday and put it up for review."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 236.2,
+      "end": 242.6,
+      "text": "Great. Sofia, can you pick up review on that one when it's ready? Wednesday afternoon probably."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 244.4,
+      "end": 247.6,
+      "text": "Yeah, I'll block time Wednesday afternoon for it."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 249.4,
+      "end": 257.4,
+      "text": "Next, the alert configuration modal, front end. Sofia, you started the design work with Tom last week, where's that at?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 259.2,
+      "end": 277.2,
+      "text": "The mocks are basically done, Tom's reviewing them Monday morning before this actually, so I should have sign off by the time we start building. I'd estimate this at five points, it's a decent amount of form logic, threshold type, comparison operator, notification channel selection."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 279.0,
+      "end": 284.6,
+      "text": "Five points sounds right given the form complexity. Any dependency on the backend piece?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 286.4,
+      "end": 295.6,
+      "text": "Only for the final wiring, I can build the UI against a mocked API first and swap it once Ravi's endpoint is live."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 297.4,
+      "end": 304.2,
+      "text": "Good, that unblocks you from waiting on backend. Let's put that at five points, assigned to Sofia."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 306.0,
+      "end": 309.0,
+      "text": "Sounds good."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 310.8,
+      "end": 318.0,
+      "text": "Now the big one, the alert evaluation engine. Ravi, walk me through how you're thinking about sizing this."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 319.8,
+      "end": 340.2,
+      "text": "So the core challenge is we can't check every threshold on every incoming event, that would be way too much database load at our event volume. I want to build a rolling aggregation layer that pre-computes metric values on a schedule, maybe every sixty seconds, and then checks thresholds against that."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 342.0,
+      "end": 346.8,
+      "text": "Sixty second latency on alerts, is that acceptable for a first version?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 348.6,
+      "end": 355.0,
+      "text": "I think so, nobody's asking for sub-second alerting on business metrics like churn or usage drops."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 356.8,
+      "end": 367.2,
+      "text": "Agreed, and honestly getting that tight would be a much bigger lift, I'd rather ship something solid at sixty seconds than something fragile at five seconds."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 369.0,
+      "end": 377.8,
+      "text": "Makes sense, let's go with the sixty second approach for v1. How many points for the aggregation layer plus threshold checking logic?"
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 379.6,
+      "end": 392.8,
+      "text": "That's genuinely the hardest ticket this sprint. I'd say eight points, and honestly there's real risk it spills into next sprint if the aggregation approach hits something unexpected with our time series storage."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 394.6,
+      "end": 407.8,
+      "text": "Let's flag that risk now then, eight points, and if it's not done by Thursday we reassess and maybe split remaining work into a follow up ticket rather than block the whole sprint."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 409.6,
+      "end": 416.4,
+      "text": "That works for me, I'd rather call the risk out early than surprise everyone at sprint review."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 418.2,
+      "end": 428.6,
+      "text": "Appreciate that. Okay, running total so far, two plus five plus eight, that's fifteen points committed. What else do we have in the backlog that's ready?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 430.4,
+      "end": 441.2,
+      "text": "There's the empty state redesign carried over from last sprint, that's already scoped at three points, I just need to finish it, I got about halfway through."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 443.0,
+      "end": 446.6,
+      "text": "Let's add that, three points, Sofia continues. Anything else?"
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 448.4,
+      "end": 464.0,
+      "text": "There's a tech debt item I want to squeeze in if we have room, upgrading our Postgres client library, we're two major versions behind and it's starting to block some of the connection pooling improvements we need for Snowflake."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 465.8,
+      "end": 468.8,
+      "text": "How risky is that upgrade?"
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 470.6,
+      "end": 480.2,
+      "text": "Should be low risk, mostly mechanical, but I want to budget time for regression testing since it touches every query path in the app."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 482.0,
+      "end": 491.6,
+      "text": "Let's size it at three points then, and Ravi you take it after the pagination fix. That puts us at twenty one points total."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 493.4,
+      "end": 501.8,
+      "text": "That seems reasonable given last sprint we closed thirty one, though this sprint has heavier backend lifting with the evaluation engine."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 503.6,
+      "end": 517.6,
+      "text": "Right, I don't want to overload given the alerting engine risk. Let's hold the line at twenty one and leave room, if we blow through it we can always pull something from the backlog Thursday."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 519.4,
+      "end": 523.4,
+      "text": "Agreed, better to under-commit slightly than blow the sprint again."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 525.2,
+      "end": 536.8,
+      "text": "Alright, let's talk sprint goal. I'd phrase it as, ship real time alert configuration and evaluation internally, fix the Globex pagination bug, and close out the empty state redesign."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 538.6,
+      "end": 542.2,
+      "text": "That covers everything on the board, works for me."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 544.0,
+      "end": 547.0,
+      "text": "Yep, agreed."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 548.8,
+      "end": 555.6,
+      "text": "Great, I'll write that up in the sprint doc. Quick logistics, standups still nine forty five daily?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 557.4,
+      "end": 560.4,
+      "text": "Works for me."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 562.2,
+      "end": 565.2,
+      "text": "Yep, same."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 567.0,
+      "end": 576.6,
+      "text": "Okay, and I want a mid sprint check-in specifically on the evaluation engine given the risk we flagged, let's do that Thursday at two."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 578.4,
+      "end": 588.0,
+      "text": "Sounds good, I'll have a clearer read on the aggregation approach by then, probably know by Wednesday if the time series storage plays nice."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 589.8,
+      "end": 598.6,
+      "text": "Perfect. One more thing, QA capacity, do we have coverage for the alert config modal and the pagination fix before we ship?"
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 600.4,
+      "end": 612.0,
+      "text": "I can write unit tests for the modal form logic myself, but we probably want a QA pass on the actual notification behavior once delivery is built next sprint."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 613.8,
+      "end": 627.4,
+      "text": "That's fine, delivery testing can wait for Sprint 43 since delivery itself is out of scope this sprint. For this sprint, unit tests plus Ravi's own testing on the pagination fix should be enough."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 629.2,
+      "end": 636.8,
+      "text": "I'll add integration tests for the cursor pagination change specifically since that's the part most likely to regress silently."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 638.6,
+      "end": 659.0,
+      "text": "Good call, large result set bugs are exactly the kind of thing that sneaks past manual testing. Alright, I think we have a solid sprint. Let me recap owners, Ravi takes the pagination fix by Wednesday and the Postgres upgrade after, plus leads the evaluation engine with a Thursday risk check-in."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 660.8,
+      "end": 663.8,
+      "text": "Correct."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 665.6,
+      "end": 676.4,
+      "text": "Sofia takes the alert config modal at five points pending Tom's sign off Monday, plus finishes the empty state redesign, and reviews Ravi's pagination fix Wednesday afternoon."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 678.2,
+      "end": 681.2,
+      "text": "Yep, that's right."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 683.0,
+      "end": 697.0,
+      "text": "I'll write up the sprint goal in the doc, set up Thursday's two o'clock check in, and report progress back to Maya at the mid sprint point given how much she's watching the alerting work."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 698.8,
+      "end": 701.8,
+      "text": "Sounds like a plan."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 703.6,
+      "end": 706.6,
+      "text": "Agreed, let's get after it."
+    },
+    {
+      "speaker": "Derek Osei",
+      "start": 708.4,
+      "end": 715.6,
+      "text": "Great, thanks both, let's have a good sprint. I'll drop the board link in Slack right after this."
+    },
+    {
+      "speaker": "Sofia Marin",
+      "start": 717.4,
+      "end": 720.4,
+      "text": "Thanks Derek, talk at standup Monday."
+    },
+    {
+      "speaker": "Ravi Shah",
+      "start": 722.2,
+      "end": 725.2,
+      "text": "See you both then, bye."
+    }
+  ],
+  "summary": {
+    "overview": "Derek led Sprint 42 planning with Sofia and Ravi, with Maya joining briefly to set priorities around the real-time alerting epic and the Globex pagination bug. The team committed to a 21-point sprint covering the pagination fix, the alert configuration modal frontend, a 60-second rolling aggregation approach for the alert evaluation engine, the carried-over empty state redesign, and a Postgres client library upgrade. The evaluation engine was flagged as the highest-risk item, with a Thursday check-in scheduled to catch any slippage early. Sprint 41 closed at 31 of 34 committed points with one carryover.",
+    "bullet_points": [
+      "\ud83d\udcc8 Sprint 41 closed 31/34 points, one carryover (empty state redesign)",
+      "\ud83d\udea8 Real-time alerting epic split into config UI, evaluation engine, and delivery (delivery pushed to Sprint 43)",
+      "\ud83d\udc1b Globex pagination bug root-caused: cursor-based pagination fix, 2 points, Ravi shipping Wednesday",
+      "\ud83c\udfa8 Alert config modal sized at 5 points, pending Tom's design sign-off Monday",
+      "\u2699\ufe0f Evaluation engine sized at 8 points using 60-second rolling aggregation, flagged as highest risk",
+      "\ud83e\uddee Sprint committed at 21 points total, intentionally under Sprint 41's velocity given risk",
+      "\ud83d\uddd3\ufe0f Thursday 2pm risk check-in scheduled specifically for the evaluation engine",
+      "\ud83d\udd27 Postgres client library upgrade (3 points) added to unblock future Snowflake connection pooling work"
+    ],
+    "keywords": [
+      "Sprint 42",
+      "real-time alerting",
+      "evaluation engine",
+      "pagination bug",
+      "cursor pagination",
+      "alert configuration modal",
+      "sprint velocity",
+      "Postgres upgrade",
+      "story points"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Sprint 41 Retro and Priorities",
+      "start": 0.0,
+      "end": 213.2,
+      "summary": "Derek reviews Sprint 41 velocity and Maya joins to set priorities: real-time alerting progress and the Globex pagination bug."
+    },
+    {
+      "title": "Pagination Fix and Alert Modal Sizing",
+      "start": 215.0,
+      "end": 309.0,
+      "summary": "The team locks in the pagination fix and sizes the alert configuration modal frontend work."
+    },
+    {
+      "title": "Alert Evaluation Engine Sizing",
+      "start": 310.8,
+      "end": 416.4,
+      "summary": "Ravi proposes a 60-second rolling aggregation approach for the evaluation engine and the team sizes it with risk flagged."
+    },
+    {
+      "title": "Backlog and Capacity Planning",
+      "start": 418.2,
+      "end": 523.4,
+      "summary": "The team adds the empty state carryover and a Postgres upgrade, landing on a 21-point sprint commitment."
+    },
+    {
+      "title": "Sprint Goal and Logistics",
+      "start": 525.2,
+      "end": 659.0,
+      "summary": "Derek sets the sprint goal, confirms standup cadence, and schedules a Thursday risk check-in with QA coverage plans."
+    },
+    {
+      "title": "Recap and Close",
+      "start": 660.8,
+      "end": 725.2,
+      "summary": "Derek recaps owners and deliverables for the sprint before closing the meeting."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Fix cursor-based pagination bug on query builder endpoint by Wednesday",
+      "assignee": "Ravi Shah",
+      "due_in_days": 5,
+      "completed": false,
+      "timestamp": 179.4
+    },
+    {
+      "text": "Review Ravi's pagination fix Wednesday afternoon",
+      "assignee": "Sofia Marin",
+      "due_in_days": 5,
+      "completed": false,
+      "timestamp": 244.4
+    },
+    {
+      "text": "Build alert configuration modal UI pending Tom's design sign-off",
+      "assignee": "Sofia Marin",
+      "due_in_days": 10,
+      "completed": false,
+      "timestamp": 259.2
+    },
+    {
+      "text": "Build alert evaluation engine with 60-second rolling aggregation, flag risk by Thursday check-in",
+      "assignee": "Ravi Shah",
+      "due_in_days": 10,
+      "completed": false,
+      "timestamp": 379.6
+    },
+    {
+      "text": "Finish carried-over empty state redesign",
+      "assignee": "Sofia Marin",
+      "due_in_days": 10,
+      "completed": true,
+      "timestamp": 430.4
+    },
+    {
+      "text": "Upgrade Postgres client library after pagination fix",
+      "assignee": "Ravi Shah",
+      "due_in_days": 10,
+      "completed": false,
+      "timestamp": 482.0
+    },
+    {
+      "text": "Write up sprint goal in sprint doc and set up Thursday 2pm risk check-in",
+      "assignee": "Derek Osei",
+      "due_in_days": 0,
+      "completed": true,
+      "timestamp": 548.8
+    }
+  ]
+}

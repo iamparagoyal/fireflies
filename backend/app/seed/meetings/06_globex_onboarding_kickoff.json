@@ -1,0 +1,560 @@
+{
+  "title": "Globex Onboarding Kickoff",
+  "days_ago": 1,
+  "start_time": "15:00",
+  "platform": "zoom",
+  "participants": [
+    {
+      "name": "Aisha Rahman",
+      "email": "aisha.rahman@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Lena Ortiz",
+      "email": "lena.ortiz@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Ethan Park",
+      "email": "ethan.park@globex.com",
+      "is_host": false
+    },
+    {
+      "name": "Diane Foster",
+      "email": "diane.foster@globex.com",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Customer",
+    "Onboarding"
+  ],
+  "transcript": [
+    {
+      "speaker": "Aisha Rahman",
+      "start": 0.0,
+      "end": 13.2,
+      "text": "Hi everyone, welcome, so excited to kick this off officially. Ethan, Diane, thanks for making time, I know the first two weeks after signing are always a bit hectic on your end too."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 14.7,
+      "end": 21.9,
+      "text": "Happy to be here, we've been looking forward to actually getting into this after all the evaluation calls."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 23.4,
+      "end": 29.0,
+      "text": "Same, ready to finally see this thing live instead of just slides and demos."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 30.5,
+      "end": 44.5,
+      "text": "I love that energy. I'm Aisha, I'll be your dedicated customer success manager throughout onboarding and beyond, and Lena here is our solutions engineer, she'll be doing the technical heavy lifting on the integration side."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 46.0,
+      "end": 60.8,
+      "text": "Hey both, looking forward to digging into your systems, I read through the discovery notes from the sales process so I have a good sense of what we're working with, but let's confirm a few things today."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 62.3,
+      "end": 65.3,
+      "text": "Sounds good."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 66.8,
+      "end": 78.4,
+      "text": "Let's start with goals, just so we're all rowing in the same direction. Diane, from an operations standpoint, what does success look like for you in the first month?"
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 79.9,
+      "end": 92.3,
+      "text": "Honestly, the biggest thing is getting our regional directors real visibility into patient throughput and bed utilization across our facilities without waiting on my team to pull reports every Monday morning."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 93.8,
+      "end": 99.8,
+      "text": "That's a great concrete goal. Ethan, from an IT side, what matters most to you?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 101.3,
+      "end": 110.9,
+      "text": "Clean, secure integration with our systems without creating a compliance headache, and honestly not creating extra work for my team beyond the initial setup."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 112.4,
+      "end": 120.8,
+      "text": "Understood, we'll keep both of those front and center. Lena, can you walk through the technical setup at a high level?"
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 122.3,
+      "end": 137.5,
+      "text": "Sure. From what I understand, your two main data sources are your data warehouse, which sits on Snowflake I believe, and your claims processing system, plus you mentioned Salesforce for account management on the health system relationship side."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 139.0,
+      "end": 152.2,
+      "text": "That's right, Snowflake's our warehouse, we push nightly extracts from Epic into it already, so a lot of the clinical and operational data is already centralized there, which should make your side easier."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 153.7,
+      "end": 166.1,
+      "text": "That's great news actually, since your data's already consolidated in Snowflake, we can connect there directly rather than standing up separate connectors to each source system, that simplifies things a lot."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 167.6,
+      "end": 174.0,
+      "text": "That's good to hear, we were worried this was going to be a much bigger lift."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 175.5,
+      "end": 183.5,
+      "text": "For the claims system, is that something with an API, or would we be looking at a direct database connection?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 185.0,
+      "end": 193.8,
+      "text": "It's got a REST API, we use it for a couple other integrations already, I can get you access and documentation today."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 195.3,
+      "end": 212.1,
+      "text": "Perfect, that'll help me scope the claims integration properly. On the compliance side, since this is healthcare data, we'll need to get a Business Associate Agreement in place before any PHI touches our systems, is that something legal already has in motion?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 213.6,
+      "end": 222.4,
+      "text": "Yes, our legal team started that during the sales process actually, I believe it's with your legal team now for final review."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 223.9,
+      "end": 235.5,
+      "text": "I'll check on that status today and make sure it's not sitting in someone's inbox, that needs to be fully executed before we connect anything with PHI in it."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 237.0,
+      "end": 243.0,
+      "text": "Appreciated, that's exactly the kind of thing that quietly stalls projects if nobody's tracking it."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 244.5,
+      "end": 262.1,
+      "text": "Agreed, I'll own that closely. Let's talk timeline next. Our standard onboarding pattern is roughly two weeks to get the first core dashboards live once we have access and credentials, then another two to four weeks to roll out to the full user base."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 263.6,
+      "end": 269.6,
+      "text": "Two weeks feels fast, is that realistic given the BAA might not be signed yet?"
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 271.1,
+      "end": 285.5,
+      "text": "Fair point, we can start connecting to non-PHI data immediately, things like facility level aggregate metrics that don't contain patient level detail, while the BAA finalizes. Once it's signed we layer in anything that touches PHI."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 287.0,
+      "end": 295.4,
+      "text": "That's a good approach actually, it means we're not fully blocked waiting on legal, we just sequence what we build first."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 296.9,
+      "end": 307.3,
+      "text": "That works for us, the aggregate throughput and utilization dashboards are honestly the most urgent thing anyway, that's not deeply PHI sensitive at the facility level."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 308.8,
+      "end": 324.0,
+      "text": "Great, let's build the rollout plan around that then. Week one, Lena gets Snowflake connected and builds the first aggregate dashboards, facility throughput and bed utilization. Week two, we review those with your regional director group and iterate."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 325.5,
+      "end": 333.9,
+      "text": "That timeline works well, we actually have a regional directors meeting in exactly two weeks, perfect timing to show something real."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 335.4,
+      "end": 343.8,
+      "text": "Let's target having a first pass ready a couple days before that meeting so there's buffer for feedback and quick fixes."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 345.3,
+      "end": 351.3,
+      "text": "Good idea, let's aim for the Wednesday before, giving us Thursday and Friday as buffer."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 352.8,
+      "end": 361.6,
+      "text": "Works on my end, I'll make sure Snowflake access is provisioned by end of this week so Lena's not waiting on credentials."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 363.1,
+      "end": 367.5,
+      "text": "Appreciated, that's usually the biggest thing that slows down week one."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 369.0,
+      "end": 377.8,
+      "text": "Let's talk seats and rollout scope next. You're at two hundred and ten seats total, is that all at once or phased?"
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 379.3,
+      "end": 394.1,
+      "text": "Phased, honestly. We want to prove it out with the regional directors and facility ops leads first, that's maybe forty people, then roll out to the broader ops and finance teams after we've ironed out any kinks."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 395.6,
+      "end": 406.4,
+      "text": "That's actually the approach we usually recommend, phased rollout tends to go a lot smoother than a big bang launch to two hundred people on day one."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 407.9,
+      "end": 412.3,
+      "text": "Makes sense, fewer support tickets to deal with if something's off."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 413.8,
+      "end": 421.0,
+      "text": "Exactly. For SSO, are you looking to connect your identity provider so people don't need separate Beacon logins?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 422.5,
+      "end": 434.5,
+      "text": "Yes, we're on Okta, I'd want SAML SSO set up before we roll out beyond the first forty users, don't want to be managing separate passwords for two hundred people."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 436.0,
+      "end": 446.0,
+      "text": "That's straightforward on our side, Okta SAML is one of our most common setups. I can get that configured alongside the Snowflake connection this week."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 447.5,
+      "end": 456.3,
+      "text": "Great, I'll get you admin access to our Okta tenant so you can walk through the setup together with our identity team."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 457.8,
+      "end": 465.4,
+      "text": "Perfect. Let's talk training next. How do you want to handle onboarding the actual users once dashboards are live?"
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 466.9,
+      "end": 480.9,
+      "text": "I think a live session with the first forty users would be good, maybe thirty to forty five minutes, and then something they can reference later since not everyone will remember everything from one session."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 482.4,
+      "end": 495.6,
+      "text": "We can absolutely do that, I'll set up a live training session for that first cohort, and we also have a self-serve help center plus in-app guided tours that new users get automatically."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 497.1,
+      "end": 501.9,
+      "text": "That combination sounds good, live plus reference material covers most learning styles."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 503.4,
+      "end": 514.6,
+      "text": "Agreed. Let's also talk communication cadence for the onboarding period specifically. I'd propose a weekly thirty minute check-in, plus a shared Slack channel for anything urgent between calls."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 516.1,
+      "end": 522.1,
+      "text": "Slack channel is great, that'll be faster than email for quick technical questions during setup."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 523.6,
+      "end": 529.2,
+      "text": "Weekly check-in works for me too, keeps everyone honest on progress without being excessive."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 530.7,
+      "end": 537.1,
+      "text": "Great, I'll get that Slack channel set up today and send the first weekly check-in invite."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 538.6,
+      "end": 550.2,
+      "text": "One more technical thing, do you have a sandbox or staging version of your Snowflake environment, or should I plan to work directly against production data with read-only access?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 551.7,
+      "end": 562.9,
+      "text": "We do have a staging environment that mirrors production schema, I'd actually prefer you build against that first and we cut over to production once things are validated."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 564.4,
+      "end": 574.4,
+      "text": "That's actually ideal, let's do initial development against staging, then a validation pass against production data before anything goes in front of the regional directors."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 575.9,
+      "end": 582.3,
+      "text": "Perfect, I'll get you staging credentials today alongside the production ones so you have both ready."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 583.8,
+      "end": 595.0,
+      "text": "Great, let's talk success criteria for this rollout more concretely, so we know we're actually hitting the mark and not just shipping dashboards for the sake of it."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 596.5,
+      "end": 609.7,
+      "text": "For me, success is regional directors actually opening the dashboard themselves at least a few times a week instead of asking my team for a report, that's the behavior change we're going for."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 611.2,
+      "end": 625.2,
+      "text": "That's a great, measurable goal, I'll track login and usage data for that cohort specifically and share it with you at our regular check-ins so we can see if that behavior shift is actually happening."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 626.7,
+      "end": 636.3,
+      "text": "From my side, success is basically a quiet integration, no security incidents, no weird access issues, and minimal ongoing maintenance burden on my team."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 637.8,
+      "end": 645.0,
+      "text": "Understood, we'll make sure access controls and any changes go through you for visibility even after initial setup."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 646.5,
+      "end": 658.5,
+      "text": "Alright, let's recap before we wrap up. Lena will get Snowflake and Okta SSO connected this week, working against staging first, and build the first aggregate throughput and utilization dashboards."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 660.0,
+      "end": 666.4,
+      "text": "Confirmed, targeting a first pass ready the Wednesday before your regional directors meeting in two weeks."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 667.9,
+      "end": 678.3,
+      "text": "Ethan will provision Snowflake and Okta admin access, plus staging and production credentials, and get me the claims API documentation, all by end of this week."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 679.8,
+      "end": 683.8,
+      "text": "Yep, I'll get all of that over today or tomorrow."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 685.3,
+      "end": 696.9,
+      "text": "I'll check on the BAA status today, set up the shared Slack channel, and schedule our first weekly check-in and the live training session for the first user cohort."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 698.4,
+      "end": 703.6,
+      "text": "Sounds like a solid plan, I feel good about where this is headed."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 705.1,
+      "end": 712.3,
+      "text": "Me too, this is a great start. Anything either of you want to flag before we close out?"
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 713.8,
+      "end": 718.6,
+      "text": "Nothing from me, feeling good about the sequencing given the BAA situation."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 720.1,
+      "end": 726.5,
+      "text": "Same, thanks for being flexible on the phased approach, that was actually a concern going in."
+    },
+    {
+      "speaker": "Aisha Rahman",
+      "start": 728.0,
+      "end": 736.4,
+      "text": "Of course, that's what we're here for. Thanks both, talk soon, and I'll have that Slack channel up within the hour."
+    },
+    {
+      "speaker": "Lena Ortiz",
+      "start": 737.9,
+      "end": 742.7,
+      "text": "Thanks everyone, looking forward to digging into the Snowflake connection this afternoon."
+    },
+    {
+      "speaker": "Ethan Park",
+      "start": 744.2,
+      "end": 747.2,
+      "text": "Thanks Aisha, thanks Lena, talk soon."
+    },
+    {
+      "speaker": "Diane Foster",
+      "start": 748.7,
+      "end": 751.9,
+      "text": "Bye everyone, excited to see this come together."
+    }
+  ],
+  "summary": {
+    "overview": "Aisha and Lena kicked off onboarding for Globex, a 210-seat healthcare analytics customer, with IT lead Ethan Park and Ops Manager Diane Foster. The team aligned on goals (self-serve visibility into throughput and bed utilization for regional directors, and a clean low-maintenance integration for IT) and mapped Globex's existing Snowflake data warehouse and claims API as integration points. Because the Business Associate Agreement is still finalizing, the team sequenced work to start with non-PHI aggregate dashboards while legal completes the BAA, targeting a first dashboard pass before Globex's regional directors meeting in two weeks. The group also aligned on Okta SSO, a phased 40-user rollout, training format, and a weekly check-in cadence.",
+    "bullet_points": [
+      "\ud83c\udfaf Goals: self-serve throughput/utilization visibility for ops, low-maintenance secure integration for IT",
+      "\ud83c\udfd7\ufe0f Integration plan: connect directly to Globex's existing Snowflake warehouse, plus claims system REST API",
+      "\ud83d\udcc4 BAA still finalizing with legal; team sequences non-PHI aggregate dashboards first",
+      "\ud83d\udcc5 Two-week timeline to first dashboards, targeting the Wednesday before Globex's regional directors meeting",
+      "\ud83d\udc65 Phased rollout: first 40 users (regional directors, facility ops leads), then remaining 210 seats",
+      "\ud83d\udd10 Okta SAML SSO to be configured before rollout beyond the first cohort",
+      "\ud83e\uddea Development against Snowflake staging first, validated before cutover to production",
+      "\ud83d\udcac Weekly 30-minute check-in plus dedicated Slack channel for onboarding period"
+    ],
+    "keywords": [
+      "Globex",
+      "onboarding kickoff",
+      "Snowflake integration",
+      "BAA",
+      "HIPAA",
+      "Okta SSO",
+      "phased rollout",
+      "claims API",
+      "healthcare analytics"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Goals and Success Criteria",
+      "start": 0.0,
+      "end": 120.8,
+      "summary": "Aisha opens the kickoff and Diane and Ethan share their respective operational and IT goals for the rollout."
+    },
+    {
+      "title": "Technical Architecture Overview",
+      "start": 122.3,
+      "end": 243.0,
+      "summary": "Lena reviews Globex's Snowflake warehouse, claims system API, and the compliance requirement for a Business Associate Agreement."
+    },
+    {
+      "title": "Timeline and Phased Rollout Plan",
+      "start": 244.5,
+      "end": 412.3,
+      "summary": "The team sequences work around the pending BAA, targeting aggregate dashboards first and a two-week timeline to the regional directors meeting."
+    },
+    {
+      "title": "SSO, Training, and Communication Cadence",
+      "start": 413.8,
+      "end": 537.1,
+      "summary": "The group covers Okta SSO setup, a phased training plan, and a weekly check-in plus Slack channel for onboarding."
+    },
+    {
+      "title": "Staging Environment and Success Metrics",
+      "start": 538.6,
+      "end": 645.0,
+      "summary": "Lena confirms a staging-first build approach and the team defines concrete success metrics for both operations and IT."
+    },
+    {
+      "title": "Recap and Close",
+      "start": 646.5,
+      "end": 751.9,
+      "summary": "Aisha recaps owners and deliverables for the week before closing the kickoff."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Check status of Business Associate Agreement and ensure it's fully executed",
+      "assignee": "Aisha Rahman",
+      "due_in_days": 2,
+      "completed": false,
+      "timestamp": 223.9
+    },
+    {
+      "text": "Provision Snowflake staging and production access for Lena",
+      "assignee": "Ethan Park",
+      "due_in_days": 3,
+      "completed": false,
+      "timestamp": 352.8
+    },
+    {
+      "text": "Send claims processing system API documentation",
+      "assignee": "Ethan Park",
+      "due_in_days": 1,
+      "completed": true,
+      "timestamp": 185.0
+    },
+    {
+      "text": "Connect Snowflake and configure Okta SAML SSO, build first aggregate dashboards against staging",
+      "assignee": "Lena Ortiz",
+      "due_in_days": 5,
+      "completed": false,
+      "timestamp": 660.0
+    },
+    {
+      "text": "Set up shared Slack channel and schedule first weekly check-in and live training session",
+      "assignee": "Aisha Rahman",
+      "due_in_days": 1,
+      "completed": true,
+      "timestamp": 685.3
+    },
+    {
+      "text": "Provision Okta admin access for SSO configuration",
+      "assignee": "Ethan Park",
+      "due_in_days": 3,
+      "completed": false,
+      "timestamp": 447.5
+    }
+  ]
+}

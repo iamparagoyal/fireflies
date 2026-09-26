@@ -1,0 +1,543 @@
+{
+  "title": "Board Prep: Q3 Metrics",
+  "days_ago": 0,
+  "start_time": "16:00",
+  "platform": "zoom",
+  "participants": [
+    {
+      "name": "Carla Diaz",
+      "email": "carla.diaz@northwindlabs.io",
+      "is_host": true
+    },
+    {
+      "name": "Nate Kim",
+      "email": "nate.kim@northwindlabs.io",
+      "is_host": false
+    },
+    {
+      "name": "Maya Chen",
+      "email": "maya.chen@northwindlabs.io",
+      "is_host": false
+    }
+  ],
+  "tags": [
+    "Leadership",
+    "Finance"
+  ],
+  "transcript": [
+    {
+      "speaker": "Carla Diaz",
+      "start": 0.0,
+      "end": 14.8,
+      "text": "Okay, thanks both for blocking this, board meeting is Thursday so I want us fully aligned on the numbers and the story before we walk in. Nate, let's start with you, where did we land on Q3?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 16.6,
+      "end": 27.4,
+      "text": "Sure. ARR closed Q3 at three point two million, up from two point nine at the end of Q2, so about ten percent quarter over quarter growth."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 29.2,
+      "end": 35.2,
+      "text": "How does that compare to what we told the board last quarter we were targeting?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 37.0,
+      "end": 49.0,
+      "text": "We'd guided to three point three, so we're a bit light, about three percent under plan, mostly driven by slower new logo growth than we projected, not a retention problem."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 50.8,
+      "end": 62.4,
+      "text": "Right, retention's actually been the bright spot, our net revenue retention for Q3 came in at one hundred and eight percent, that's up from one oh three in Q2."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 64.2,
+      "end": 72.6,
+      "text": "That's a good story to lead with honestly, expansion within the existing base is strong even if new logos are softer."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 74.4,
+      "end": 85.2,
+      "text": "Agreed, and gross revenue retention was ninety six percent for the quarter, so churn stayed pretty controlled, we lost a couple of small accounts but nothing structural."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 87.0,
+      "end": 93.4,
+      "text": "Any accounts the board would specifically ask about? They tend to remember logos from past updates."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 95.2,
+      "end": 117.2,
+      "text": "Acme is one I'd flag proactively rather than let them find it in the numbers. Their usage dipped after their data engineering lead went on leave, and their renewal is coming up in a few weeks. Sam's actively managing it and we're getting them early access to the Snowflake integration to help secure the renewal."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 119.0,
+      "end": 131.0,
+      "text": "Good, I'd rather we bring that up ourselves with a plan attached than have someone ask and we look flat footed. What's the ARR exposure there if it doesn't renew?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 132.8,
+      "end": 140.8,
+      "text": "Forty two thousand annual, so meaningful but not company threatening, less than one and a half percent of total ARR."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 142.6,
+      "end": 148.6,
+      "text": "Good context to have ready if asked. What's the positive counterweight we can point to?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 150.4,
+      "end": 162.8,
+      "text": "Globex, definitely. Two hundred and ten seats, biggest new logo of the year, healthcare analytics space which is a new vertical proof point for us, and onboarding's going smoothly so far."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 164.6,
+      "end": 172.2,
+      "text": "That's a great one to highlight, especially the new vertical angle, investors like seeing we're not a one-industry product."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 174.0,
+      "end": 180.8,
+      "text": "Agreed, I'll make sure Globex gets its own slide rather than getting buried in a logo grid."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 182.6,
+      "end": 187.0,
+      "text": "Nate, let's talk burn and runway, that's always a top question."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 188.8,
+      "end": 204.0,
+      "text": "Burn was four hundred and ten thousand for the quarter, roughly flat versus Q2's four hundred and five, mostly driven by the two engineering hires we made in August. At current burn we've got nineteen months of runway."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 205.8,
+      "end": 210.2,
+      "text": "Nineteen months, and that's assuming no further hiring or revenue changes?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 212.0,
+      "end": 225.6,
+      "text": "Right, that's the flat scenario. If we hit our Q4 hiring plan, which includes the frontend engineer we're finalizing and possibly one more backend hire in Q1, runway comes down to around seventeen months."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 227.4,
+      "end": 235.0,
+      "text": "That's still comfortable, but I want us ready if someone asks about the next fundraise timeline given that number."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 236.8,
+      "end": 250.4,
+      "text": "I'd say we want to be back in market by roughly month twelve to fourteen of that runway to leave buffer, so sometime around next summer is when we'd start those conversations in earnest."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 252.2,
+      "end": 261.8,
+      "text": "Good, let's have that answer ready but not put it in the deck proactively, no need to raise the fundraise topic before someone asks."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 263.6,
+      "end": 267.6,
+      "text": "Agreed, better to be prepared than to lead with it."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 269.4,
+      "end": 273.8,
+      "text": "Let's talk CAC and LTV since that usually comes up too."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 275.6,
+      "end": 296.0,
+      "text": "CAC was around eight thousand two hundred per customer this quarter, up slightly from seventy eight hundred, mostly due to the marketing spend increase for the Q4 campaign that's technically launching just after this quarter closes, so some of that spend is showing up in Q3 without the resulting pipeline yet."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 297.8,
+      "end": 305.0,
+      "text": "That's an important nuance, I don't want the board to think CAC is trending badly without that context."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 306.8,
+      "end": 312.4,
+      "text": "Agreed, I'll add a footnote on the slide explaining the campaign spend timing mismatch."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 314.2,
+      "end": 326.2,
+      "text": "And LTV to CAC ratio is still healthy, around five to one based on current retention curves, so even with CAC ticking up slightly we're well within a healthy range."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 328.0,
+      "end": 340.0,
+      "text": "Good, that ratio is the number they'll actually care about more than CAC in isolation. Let's move to product. Maya, what are the highlights you want on the roadmap slide?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 341.8,
+      "end": 357.8,
+      "text": "Two big ones, the Snowflake integration, which is about seventy percent complete and on track for an October fifteenth beta, and the dashboard redesign, which just came out of design critique with a locked scope, drag and drop customizable layouts."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 359.6,
+      "end": 367.2,
+      "text": "Any customer proof points we can attach to those, boards like to see product investment tied to real demand?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 369.0,
+      "end": 383.8,
+      "text": "Yes, Snowflake was directly requested by multiple customers including Acme, and the dashboard redesign came out of interviews with eight customers including Northstar, who's actually going to preview the design as a partner before we build it."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 385.6,
+      "end": 396.0,
+      "text": "That's a great detail, shows we're not building in a vacuum. I'd put both of those on one slide as 'customer-driven roadmap' or something like that."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 397.8,
+      "end": 403.0,
+      "text": "I like that framing, ties product spend directly to retention and expansion story."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 404.8,
+      "end": 410.4,
+      "text": "Let's talk headcount plan for Q4 specifically since that ties to the burn conversation."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 412.2,
+      "end": 424.2,
+      "text": "We're finalizing an offer for a senior frontend engineer, that's mostly to support the dashboard redesign work. Beyond that, no other planned hires this quarter unless something urgent comes up."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 426.0,
+      "end": 435.6,
+      "text": "That hire is close, we did the final interview a few days ago and I think we'll have an answer by end of week."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 437.4,
+      "end": 446.6,
+      "text": "Good, let's mention headcount is measured and tied directly to roadmap priorities rather than growing for growth's sake, boards like hearing that discipline."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 448.4,
+      "end": 451.6,
+      "text": "Agreed, I'll frame the headcount slide that way."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 453.4,
+      "end": 459.8,
+      "text": "Let's talk about anticipated tough questions. What do we think they'll push on hardest this time?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 461.6,
+      "end": 472.0,
+      "text": "Probably the new logo growth miss versus the three point three target, they'll want to understand if that's a pipeline problem or a close rate problem."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 473.8,
+      "end": 485.8,
+      "text": "It's more pipeline volume honestly, our close rate on qualified opportunities actually held steady around twenty eight percent, we just had fewer opportunities enter the pipeline this quarter than planned."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 487.6,
+      "end": 490.8,
+      "text": "Do we know why pipeline volume was light?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 492.6,
+      "end": 507.8,
+      "text": "Partly timing, our big Q4 campaign was intentionally held for October rather than September so it wouldn't overlap with a slower late-summer buying cycle, so some of what would've been Q3 pipeline is really just shifted into Q4."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 509.6,
+      "end": 517.6,
+      "text": "That's a defensible answer as long as we're confident Q4 actually delivers, otherwise it looks like an excuse in hindsight."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 519.4,
+      "end": 525.4,
+      "text": "Fair, I'd want us to genuinely believe that before we say it in the room."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 527.2,
+      "end": 538.8,
+      "text": "I do believe it, the campaign's fully built and launching October first, and early creative testing results were strong, testimonial-led ads nearly doubled click through versus our old messaging."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 540.6,
+      "end": 550.6,
+      "text": "Okay, I'm comfortable with that answer then, as long as we're honest that Q4 needs to prove it out. What else might they push on?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 552.4,
+      "end": 559.2,
+      "text": "Possibly competitive positioning, there's been more noise from a couple of well-funded competitors in adjacent analytics categories."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 561.0,
+      "end": 573.4,
+      "text": "I'd point to win rate against named competitors, we're still winning the majority of competitive deals we're in, mostly on ease of setup and time to first dashboard, that hasn't slipped."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 575.2,
+      "end": 586.4,
+      "text": "Good, let's have that win rate number ready even if it's not on the main slide, I don't want to be searching for it live if someone asks."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 588.2,
+      "end": 595.8,
+      "text": "I'll pull the exact number from the CRM and have it ready as a backup slide in the appendix."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 597.6,
+      "end": 604.0,
+      "text": "Perfect. Let's talk deck structure now that we've covered the substance. What's the current slide order?"
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 605.8,
+      "end": 619.0,
+      "text": "Financial summary first, ARR, retention, burn and runway. Then the customer wins and risk slide with Globex and Acme. Then the customer-driven roadmap slide Maya described. Then headcount. Then a Q4 outlook slide."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 620.8,
+      "end": 629.2,
+      "text": "That order makes sense, leads with the numbers, contextualizes the risk honestly, then shows we're investing intentionally in product and people."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 631.0,
+      "end": 639.4,
+      "text": "Agreed, and I think the Q4 outlook slide should reference the campaign explicitly given the pipeline question we just talked through."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 641.2,
+      "end": 645.2,
+      "text": "Good call, let's make sure that's explicit rather than implied."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 647.0,
+      "end": 656.2,
+      "text": "I'll get a full draft of the deck to both of you by tomorrow so we have a day to review before Thursday."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 658.0,
+      "end": 666.8,
+      "text": "Perfect, let's plan a quick run through Wednesday afternoon, maybe thirty minutes, just to rehearse answers to the tougher questions out loud."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 668.6,
+      "end": 677.4,
+      "text": "Works for me, verbalizing it once before the actual meeting always helps me sound less rehearsed and more natural in the room."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 679.2,
+      "end": 683.2,
+      "text": "Agreed, I'll send a calendar invite for Wednesday at three."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 685.0,
+      "end": 693.8,
+      "text": "Great. Let's recap. Nate sends the full draft deck tomorrow, including the win rate appendix slide and the CAC footnote we discussed."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 695.6,
+      "end": 698.6,
+      "text": "Confirmed."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 700.4,
+      "end": 713.6,
+      "text": "Maya, can you get me the exact customer quotes or details for the Snowflake and dashboard redesign customer-driven slide by tomorrow as well, so Nate has everything he needs to finalize that slide?"
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 715.4,
+      "end": 719.4,
+      "text": "Yep, I'll pull those together today and send them over."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 721.2,
+      "end": 729.6,
+      "text": "Great, and we all meet Wednesday at three to rehearse. I think we're in good shape, this was a productive session."
+    },
+    {
+      "speaker": "Nate Kim",
+      "start": 731.4,
+      "end": 735.8,
+      "text": "Agreed, feeling much more prepared than I did an hour ago."
+    },
+    {
+      "speaker": "Maya Chen",
+      "start": 737.6,
+      "end": 740.6,
+      "text": "Same, thanks both, talk Wednesday."
+    },
+    {
+      "speaker": "Carla Diaz",
+      "start": 742.4,
+      "end": 745.4,
+      "text": "Thanks everyone, talk soon."
+    }
+  ],
+  "summary": {
+    "overview": "Carla, Nate, and Maya prepped the Q3 board deck ahead of Thursday's board meeting, reviewing ARR growth of 10% QoQ to $3.2M (slightly under the $3.3M guided target), strong net revenue retention of 108%, and controlled churn. The team planned how to proactively address the Acme renewal risk and highlight the Globex win as proof of expansion into a new vertical. They also worked through burn rate, an 19-month runway (17 months under the Q4 hiring plan), CAC/LTV context, and rehearsed answers to anticipated tough questions about new logo growth and competitive pressure. The session closed with a plan to finalize the deck and hold a rehearsal run-through Wednesday.",
+    "bullet_points": [
+      "\ud83d\udcc8 Q3 ARR: $3.2M, up 10% QoQ, ~3% under the $3.3M guided target",
+      "\ud83d\udc9a Net revenue retention 108% (up from 103% in Q2); gross retention 96%",
+      "\u26a0\ufe0f Acme renewal risk flagged proactively: $42K ARR exposure, <1.5% of total ARR",
+      "\ud83c\udf89 Globex highlighted as biggest new logo of the year, proof of new vertical (healthcare analytics)",
+      "\ud83d\udcb8 Burn $410K in Q3, 19 months runway flat, 17 months under Q4 hiring plan",
+      "\ud83e\uddee CAC $8,200 (up slightly due to Q4 campaign spend timing), LTV:CAC still ~5:1",
+      "\ud83d\uddfa\ufe0f Roadmap framed as customer-driven: Snowflake integration and dashboard redesign both tied to specific customer requests",
+      "\ud83c\udfa4 Wednesday 3pm rehearsal scheduled to practice answers on pipeline miss and competitive positioning"
+    ],
+    "keywords": [
+      "board deck",
+      "Q3 metrics",
+      "ARR",
+      "net revenue retention",
+      "burn rate",
+      "runway",
+      "CAC",
+      "Acme renewal",
+      "Globex",
+      "board prep"
+    ]
+  },
+  "chapters": [
+    {
+      "title": "Revenue and Retention Review",
+      "start": 0.0,
+      "end": 85.2,
+      "summary": "Nate and Maya walk through Q3 ARR growth, net revenue retention, and gross retention numbers."
+    },
+    {
+      "title": "Customer Risk and Wins",
+      "start": 87.0,
+      "end": 180.8,
+      "summary": "The team discusses the Acme renewal risk and the Globex win as the key logos the board will ask about."
+    },
+    {
+      "title": "Burn, Runway, and Unit Economics",
+      "start": 182.6,
+      "end": 340.0,
+      "summary": "Nate covers burn rate, runway scenarios, and CAC/LTV context ahead of likely board questions."
+    },
+    {
+      "title": "Product Roadmap Highlights",
+      "start": 341.8,
+      "end": 403.0,
+      "summary": "Maya presents the Snowflake integration and dashboard redesign as customer-driven roadmap investments."
+    },
+    {
+      "title": "Headcount and Anticipated Questions",
+      "start": 404.8,
+      "end": 595.8,
+      "summary": "The group covers the Q4 hiring plan and rehearses answers to anticipated tough board questions on pipeline and competition."
+    },
+    {
+      "title": "Deck Structure and Next Steps",
+      "start": 597.6,
+      "end": 745.4,
+      "summary": "Carla and Nate finalize the board deck structure and the team assigns next steps ahead of Thursday's meeting."
+    }
+  ],
+  "action_items": [
+    {
+      "text": "Send full draft board deck including win rate appendix slide and CAC footnote",
+      "assignee": "Nate Kim",
+      "due_in_days": 1,
+      "completed": false,
+      "timestamp": 647.0
+    },
+    {
+      "text": "Pull exact competitive win rate number from CRM for appendix slide",
+      "assignee": "Nate Kim",
+      "due_in_days": 1,
+      "completed": false,
+      "timestamp": 588.2
+    },
+    {
+      "text": "Send Snowflake and dashboard redesign customer quotes/details for roadmap slide",
+      "assignee": "Maya Chen",
+      "due_in_days": 1,
+      "completed": false,
+      "timestamp": 715.4
+    },
+    {
+      "text": "Schedule and hold Wednesday 3pm rehearsal run-through before board meeting",
+      "assignee": "Nate Kim",
+      "due_in_days": 0,
+      "completed": true,
+      "timestamp": 679.2
+    },
+    {
+      "text": "Add footnote explaining CAC increase due to Q4 campaign spend timing",
+      "assignee": "Nate Kim",
+      "due_in_days": 1,
+      "completed": true,
+      "timestamp": 306.8
+    }
+  ]
+}

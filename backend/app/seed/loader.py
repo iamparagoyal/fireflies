@@ -1,12 +1,13 @@
 import json
-from datetime import datetime, time, timedelta
+import os
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app import models, schemas
-from app.models import utcnow
 from app.services.meetings import add_segments, apply_notes, get_current_user, get_or_create_tag, set_participants
 from app.services.notes_generator import GeneratedActionItem, GeneratedChapter, GeneratedNotes
 from app.services.transcript_parser import ParsedSegment
@@ -31,7 +32,11 @@ TAG_COLORS = {
 
 def _load_one(db: Session, owner: models.User, data: dict) -> models.Meeting:
     hour, minute = (int(x) for x in data.get("start_time", "10:00").split(":"))
-    started_at = datetime.combine(utcnow().date() - timedelta(days=data.get("days_ago", 0)), time(hour, minute))
+    tz = ZoneInfo(os.getenv("SEED_TIMEZONE", "Asia/Kolkata"))
+    local_day = datetime.now(tz).date() - timedelta(days=data.get("days_ago", 0))
+    started_at = (
+        datetime.combine(local_day, time(hour, minute), tzinfo=tz).astimezone(timezone.utc).replace(tzinfo=None)
+    )
 
     meeting = models.Meeting(
         owner=owner,
