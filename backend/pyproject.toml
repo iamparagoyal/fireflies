@@ -3,7 +3,7 @@ name = "fireflies-backend"
 version = "0.1.0"
 description = "FastAPI backend for the Fireflies.ai clone"
 authors = [
-    { name = "Yash Dagar", email = "yashdagar4557@gmail.com" }
+    { name = "Parag Goyal", email = "iamparagoyal@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
